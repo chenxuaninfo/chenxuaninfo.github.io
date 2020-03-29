@@ -1,0 +1,367 @@
+{
+	"name": "网站地图",
+	"children": [
+		{
+			"name": "数据分析师",
+			"children": [
+				{
+					"name": "1.思维梳理",
+					"children": [
+						{
+							"name": "Xmind",
+							"link": "https://www.xmind.cn/",
+							"value": 1
+						}, {
+							"name": "亿图",
+							"link": "https://www.edrawsoft.cn/",
+							"value": 1
+						}, {
+							"name": "Mindmanager",
+							"link": "https://www.mindmanager.cn/",
+							"value": 1
+						}, {
+							"name": "mindmeister",
+							"link": "https://www.mindmeister.com",
+							"value": 1
+						}, {
+							"name": "biggerplate",
+							"link": "https://www.biggerplate.com/",
+							"value": 1
+						}
+					]
+				}, {
+					"name": "2.信息采集",
+					"children": [
+						{
+							"name": "爬虫工具@八爪鱼",
+							"link": "https://www.bazhuayu.com/",
+							"value": 1
+						}, {
+							"name": "硬件采集@传感器",
+							"link": "https://sensor.ofweek.com/",
+							"value": 1
+						}
+					]
+				}, {
+					"name": "3.信息管理",
+					"children": [
+						{
+							"name": "数据库@Mysql",
+							"link": "https://www.mysql.com/",
+							"value": 1
+						}, {
+							"name": "ETL工具",
+							"children": [
+								{
+									"name": "Datastage",
+									"link": "Datastage",
+									"value": 1
+								}, {
+									"name": "Informatica",
+									"link": "Informatica",
+									"value": 1
+								}, {
+									"name": "Kettle",
+									"link": "Kettle",
+									"value": 1
+								}
+							]
+						}
+					]
+				}, {
+					"name": "4.信息分析",
+					"children": [
+						{
+							"name": "Java",
+							"link": "https://www.java.com/zh_CN/",
+							"value": 1
+						}, {
+							"name": "Python",
+							"link": "https://www.python.org/",
+							"value": 1
+						}, {
+							"name": "R",
+							"link": "https://www.r-project.org/",
+							"value": 1
+						}
+					]
+				}, {
+					"name": "5.辅助工具",
+					"children": [
+						{
+							"name": "Microsoft Office",
+							"link": "https://products.office.com/zh-cn/home",
+							"value": 1
+						}, {
+							"name": "Libreoffice",
+							"link": "https://www.libreoffice.org/",
+							"value": 1
+						}, {
+							"name": "WPS",
+							"link": "https://www.wps.cn/",
+							"value": 1
+						}, {
+							"name": "SPSS",
+							"link": "https://www.ibm.com/products/watson-studio-desktop",
+							"value": 1
+						}, {
+							"name": "SAS",
+							"link": "https://www.sas.com/zh_cn/home.html#",
+							"value": 1
+						}
+					]
+				}, {
+					"name": "6.信息可视",
+					"children": [
+						{
+							"name": "Tableau",
+							"link": "https://www.tableau.com/",
+							"value": 1
+						}, {
+							"name": "Finebi",
+							"link": "https://www.finebi.com/",
+							"value": 1
+						}, {
+							"name": "PowerBI",
+							"link": "https://www.PowerBI.com/",
+							"value": 1
+						}, {
+							"name": "Quick BI",
+							"link": "https://data.aliyun.com/product/bi",
+							"value": 1
+						}, {
+							"name": "Echarts",
+							"link": "https://echarts.apache.org/zh/index.html",
+							"value": 1
+						}, {
+							"name": "Highcharts",
+							"link": "https://www.highcharts.com.cn/",
+							"value": 1
+						}, {
+							"name": "D3JS",
+							"link": "https://d3js.org/",
+							"value": 1
+						}, {
+							"name": "Antv",
+							"link": "https://antv.vision/zh",
+							"value": 1
+						}, {
+							"name": "DataV",
+							"link": "http://DataV.aliyun.com",
+							"value": 1
+						}, {
+							"name": "百度Sugar",
+							"link": "https://cloud.baidu.com/product/sugar.html",
+							"value": 1
+						}, {
+							"name": "葡萄城BI",
+							"link": "https://www.grapecity.com.cn/solutions/wynw",
+							"value": 1
+						}, {
+							"name": "Poli BI",
+							"link": "https://github.com/shzlw/poli",
+							"value": 1
+						}
+					]
+				}
+			]
+		}, {
+			"name": "搜索引擎",
+			"children": [
+				{
+					"name": "百度",
+					"link": "https://www.baidu.com/",
+					"value": 1
+				}, {
+					"name": "必应",
+					"link": "https: //cn.bing.com",
+					"value": 1
+				}, {
+					"name": "谷歌",
+					"link": "https: //google.com",
+					"value": 1
+				}
+			]
+		}, {
+			"name": "语言翻译",
+			"children": [
+				{
+					"name": "百度翻译",
+					"link": "https://fanyi.baidu.com/",
+					"value": 1
+				}, {
+					"name": "必应翻译",
+					"link": "https://cn.bing.com/translator",
+					"value": 1
+				}, {
+					"name": "谷歌翻译",
+					"link": "https://translate.google.cn/",
+					"value": 1
+				}
+			]
+		}, {
+			"name": "地图",
+			"children": [
+				{
+					"name": "高德地图",
+					"link": "https://www.amap.com/",
+					"value": 1
+				}, {
+					"name": "百度地图",
+					"link": "https://map.baidu.com",
+					"value": 1
+				}, {
+					"name": "腾讯地图",
+					"link": "https://map.qq.com/",
+					"value": 1
+				}, {
+					"name": "openstreetmap",
+					"link": "https://www.openstreetmap.org/",
+					"value": 1
+				}
+			]
+		}, {
+			"name": "在线工具",
+			"children": [
+				{
+					"name": "tool.lu",
+					"link": "https://tool.lu/",
+					"value": 1
+				}, {
+					"name": "atool9.com",
+					"link": "http://www.atool9.com/",
+					"value": 1
+				}, {
+					"name": "tool.oschina.net",
+					"link": "https: //tool.oschina.net/",
+					"value": 1
+				}, {
+					"name": "bejson.com",
+					"link": "http://www.bejson.com/",
+					"value": 1
+				}, {
+					"name": "toolla.com",
+					"link": "http://www.toolla.com/",
+					"value": 1
+				}, {
+					"name": "txttool.com",
+					"link": "http://www.txttool.com/",
+					"value": 1
+				}, {
+					"name": "qqe2.com",
+					"link": "https://qqe2.com/",
+					"value": 1
+				}, {
+					"name": "sojson.com",
+					"link": "https://www.sojson.com/",
+					"value": 1
+				}, {
+					"name": "设计导航",
+					"link": "http://hao.shejidaren.com/",
+					"value": 1
+				}, {
+					"name": "SSL在线工具",
+					"link": "http://www.ssleye.com/",
+					"value": 1
+				}, {
+					"name": "SSL在线工具",
+					"link": "https://myssl.com/",
+					"value": 1
+				}, {
+					"name": "PDF在线工具",
+					"link": "https://smallpdf.com/cn",
+					"value": 1
+				}, {
+					"name": "PDF在线工具",
+					"link": "https://www.ilovepdf.com/zh-cn",
+					"value": 1
+				}, {
+					"name": "PDF在线工具",
+					"link": "https://www.pdf24.org/",
+					"value": 1
+				}, {
+					"name": "107000.com",
+					"link": "https://www.107000.com/",
+					"value": 1
+				}, {
+					"name": "c.runoob.com",
+					"link": "https://c.runoob.com/",
+					"value": 1
+				}, {
+					"name": "mdeditor.com",
+					"link": "https://www.mdeditor.com/",
+					"value": 1
+				}, {
+					"name": "jsrun.pro",
+					"link": "http://jsrun.pro/",
+					"value": 1
+				}, {
+					"name": "基因测序在线工具",
+					"link": "http://www.detaibio.com/sms2/index.html",
+					"value": 1
+				}, {
+					"name": "文件分享",
+					"link": "https://send.firefox.com/",
+					"value": 1
+				}, {
+					"name": "视频图片下载",
+					"link": "http://www.clipconverter.cc/",
+					"value": 1
+				}, {
+					"name": "视频图片下载",
+					"link": "https://pickfrom.net/",
+					"value": 1
+				}, {
+					"name": "在线抠图",
+					"link": "https://www.remove.bg/",
+					"value": 1
+				}, {
+					"name": "JS在线工具",
+					"link": "https://jshare.com.cn/new",
+					"value": 1
+				}
+			]
+		}, {
+			"name": "在线文档",
+			"children": [
+				{
+					"name": "jquery",
+					"link": "https://www.jquery123.com/",
+					"value": 1
+				}, {
+					"name": "jquery",
+					"link": "https://www.html.cn/jqapi-1.9/",
+					"value": 1
+				}, {
+					"name": "python",
+					"link": "https://docs.python.org/zh-cn/3/",
+					"value": 1
+				}, {
+					"name": "oracle docs",
+					"link": "https://docs.oracle.com/en/",
+					"value": 1
+				}, {
+					"name": "TypeScript",
+					"link": "https://www.tslang.cn/docs/home.html",
+					"value": 1
+				}, {
+					"name": "jsdelivr",
+					"link": "https://www.jsdelivr.com/",
+					"value": 1
+				}, {
+					"name": "cdnjs",
+					"link": "https://cdnjs.com/",
+					"value": 1
+				}, {
+					"name": "Linux命令手册",
+					"link": "https://www.linuxcool.com/",
+					"value": 1
+				}, {
+					"name": "Linux命令查询",
+					"link": "https://www.runoob.com/linux/linux-command-manual.html",
+					"value": 1
+				}
+			]
+		}
+	]
+}
