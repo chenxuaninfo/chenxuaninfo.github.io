@@ -362,6 +362,19 @@
 					"value": 1
 				}
 			]
+		}, {
+			"name": "文档写作",
+			"children": [
+				{
+					"name": "yuque",
+					"link": "https://www.yuque.com/chenxuaninfo",
+					"value": 1
+				}, {
+					"name": "gitbook",
+					"link": "https://gitbook.com",
+					"value": 1
+				}
+			]
 		}
 	]
 }
