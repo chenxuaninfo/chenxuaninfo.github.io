@@ -23,24 +23,32 @@
 	</head>
 
 	<body style="cursor: pointer; background: url(img/2020.jpg); width: 100%; height:1024px; position: absolute; top: 0px; left: 0px; z-index: 10000;">
-		<h1 align="center"><img src="img/RGBB_L.png" width="100px" /></h1>
+		<h1 align="center"><a title="ChenXuan.Info" href="http://chenxuan.info/"><img src="img/RGBB_L.png" width="88px" /></a></h1>
 		<div id="info" style="height:650px"></div>
 		<script>
 			var infoChart = echarts.init(document.getElementById("info"));
 			var infodata = {
-				"name": "我的博客",
+				"name": "Hello World",
 				"children": [{
-					"name": "学习笔记",
+					"name": "我的博客",
 					"children": [{
-						"name": "分析师(Analyst)",
+						"name": "ChenXuan.Info",
+						"link": "http://chenxuan.info/",
+						"value": 1
+					}]
+
+				},{
+					"name": "我的笔记",
+					"children": [{
+						"name": "Analyst",
 						"link": "https://www.yuque.com/chenxuaninfo/analyst",
 						"value": 1
 					}]
 
 				}, {
-					"name": "涉及职业",
+					"name": "我的职业",
 					"children": [{
-						"name": "数据运营@数据分析",
+						"name": "数据分析师",
 						"children": [{
 							"name": "1.分析目的",
 							"link": "http://chenxuan.info/",
@@ -67,7 +75,7 @@
 							"value": 1
 						}]
 					}, {
-						"name": "金融行业@操盘手",
+						"name": "金融操盘手",
 						"children": [{
 							"name": "1.金融经济",
 							"link": "http://chenxuan.info/",
@@ -86,7 +94,7 @@
 							"value": 1
 						}]
 					}, {
-						"name": "健康行业@健康管理",
+						"name": "健康管理师",
 						"children": [{
 							"name": "1.疾病预防",
 							"link": "http://chenxuan.info/",
@@ -154,6 +162,14 @@
 							"link": "http://chenxuan.info/",
 							"value": 1
 						}]
+					}]
+
+				}, {
+					"name": "我的微信",
+					"children": [{
+						"name": "qiukuge7",
+						"link": "http://chenxuan.info/img/Wechat.png",
+						"value": 1
 					}]
 
 				}, {
