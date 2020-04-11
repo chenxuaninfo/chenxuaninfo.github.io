@@ -7,19 +7,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 		<meta name="keywords" content="chenxuan.info" />
 		<meta name="description" content="chenxuan.info" />
-		<title>chenxuan.info</title>
+		<title>ChenXuan.Info</title>
 		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/RGBW_L.png">
 		<link rel="shortcut icon" href="img/RGBW_L.png">
 		<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
 		<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 		<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts-en.js"></script>
 		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-		<!-- <style>
-   	 html {
-    filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
-    -webkit-filter: grayscale(100%);
-    }
-   </style>-->
 	</head>
 
 	<body style="cursor: pointer; background: url(img/2020.jpg); width: 100%; height:1024px; position: absolute; top: 0px; left: 0px; z-index: 10000;">
@@ -28,146 +22,50 @@
 		<script>
 			var infoChart = echarts.init(document.getElementById("info"));
 			var infodata = {
-				"name": "Hello World",
+				"name": "ChenXuan.Info",
 				"children": [{
-					"name": "我的博客",
+					"name": "我的服务",
+					"children": [{
+						"name": "数据分析服务",
+						"link": "https://www.yuque.com/group.chenxuan.info/services",
+						"value": 1
+					},{
+						"name": "企业报表门户",
+						"link": "https://www.yuque.com/group.chenxuan.info/reportportal",
+						"value": 1
+					},{
+						"name": "数据可视化大屏",
+						"link": "https://www.yuque.com/group.chenxuan.info/desktop",
+						"value": 1
+					},{
+						"name": "数据分析行业解决方案",
+						"link": "https://www.yuque.com/group.chenxuan.info/solution",
+						"value": 1
+					},{
+						"name": "免费金融交易分析服务",
+						"link": "https://www.yuque.com/group.chenxuan.info/trader",
+						"value": 1
+					}]
+
+				},{
+					"name": "我的网站",
 					"children": [{
 						"name": "ChenXuan.Info",
 						"link": "http://chenxuan.info/",
 						"value": 1
 					}]
-
 				},{
-					"name": "我的笔记",
+					"name": "我的图书",
 					"children": [{
 						"name": "Analyst",
 						"link": "https://www.yuque.com/chenxuaninfo/analyst",
 						"value": 1
 					}]
 
-				}, {
-					"name": "我的职业",
-					"children": [{
-						"name": "数据分析师",
-						"children": [{
-							"name": "1.分析目的",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "2.数据采集",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "3.数据处理",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "4.分析挖掘",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "5.报告制作",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "6.分析决策",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}]
-					}, {
-						"name": "金融操盘手",
-						"children": [{
-							"name": "1.金融经济",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "2.资金管理",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "3.交易",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "4.变现",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}]
-					}, {
-						"name": "健康管理师",
-						"children": [{
-							"name": "1.疾病预防",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "2.健康检查",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "3.疾病治疗",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "4.疾后康复",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}]
-					}, {
-						"name": "项目管理",
-						"children": [{
-							"name": "1.启动",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "2.计划",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "3.执行",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "4.控制",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "5.收尾",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}]
-					}, {
-						"name": "产品管理",
-						"children": [{
-							"name": "1.市场调查",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "2.产品设计",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "3.产品生产",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "4.产品营销",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "5.产品运维",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}, {
-							"name": "6.产品升级",
-							"link": "http://chenxuan.info/",
-							"value": 1
-						}]
-					}]
-
-				}, {
+				},{
 					"name": "我的微信",
 					"children": [{
-						"name": "qiukuge7",
+						"name": "15771737759",
 						"link": "http://chenxuan.info/img/Wechat.png",
 						"value": 1
 					}]
@@ -235,179 +133,6 @@
 				}
 			});
 		</script>
-		<!--<div id="infonetwork" style="height:999px"></div>
-		<script>
-			var infonetworkChart = echarts.init(document.getElementById("infonetwork"));
-			infonetworkChart.showLoading();
-			$.get('data/flare.json', function(data2) {
-				infonetworkChart.hideLoading();
-
-				infonetworkChart.setOption(option = {
-					tooltip: {
-						trigger: 'item',
-						triggerOn: 'mousemove'
-					},
-					series: [{
-						type: 'tree',
-
-						name: 'Web网站导航',
-
-						data: [data2],
-
-						left: '10%',
-						right: '20%',
-
-						symbolSize: 16,
-
-						label: {
-							normal: {
-								position: 'left',
-								verticalAlign: 'middle',
-								align: 'right',
-								color: '#00000'
-							}
-						},
-
-						nodeClick: "link",
-						label: {
-							normal: {
-								position: 'left',
-								verticalAlign: 'middle',
-								align: 'right',
-								fontSize: 16,
-								color: '#00000'
-							}
-						},
-						leaves: {
-							label: {
-								normal: {
-									position: 'right',
-									verticalAlign: 'middle',
-									align: 'left'
-								}
-							}
-						},
-						expandAndCollapse: true,
-						initialTreeDepth: 6,
-						animationDuration: 550,
-						animationDurationUpdate: 750
-
-					}]
-				}, true);
-				infonetworkChart.on('click', function(p) {
-					if(typeof p.data.link == 'undefined') {
-						return;
-					} else {
-						window.open(p.data.link);
-					}
-				})
-			});
-		</script>-->
-		<!--<div class="row">
-			<div class="col-xs-12 col-sm-12">
-				<div class="tradingview-widget-container">
-					<div class="tradingview-widget-container__widget"></div>
-					<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
-						{
-							"symbols": [{
-									"description": "黄金",
-									"proName": "FOREXCOM:XAUUSD"
-								},
-								{
-									"description": "美原油",
-									"proName": "FOREXCOM:WTIUSD"
-								},
-								{
-									"description": "欧元/美元",
-									"proName": "FX:EURUSD"
-								},
-								{
-									"description": "道琼斯指数",
-									"proName": "FOREXCOM:DJI"
-								},
-								{
-									"description": "上证指数",
-									"proName": "SSE:000001"
-								},
-								{
-									"description": "标普500",
-									"proName": "OANDA:SPX500USD"
-								},
-								{
-									"description": "纳斯达克100",
-									"proName": "OANDA:NAS100USD"
-								},
-								{
-									"description": "深证综指",
-									"proName": "SZSE:399106"
-								},
-								{
-									"description": "恒生指数",
-									"proName": "HKEX:24300"
-								}
-							],
-							"colorTheme": "dark",
-							"isTransparent": false,
-							"locale": "zh_CN"
-						}
-					</script>
-				</div>
-			</div>
-		</div>
-		<div class="row">
-			<div class="col-xs-12 col-sm-12">
-				<div class="tradingview-widget-container">
-					<div id="tradingview_b46aa" style="height: 800px;"></div>
-					<script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
-					<script type="text/javascript">
-						new TradingView.widget({
-							"autosize": true,
-							"symbol": "FOREXCOM:DJI",
-							"timezone": "Etc/UTC",
-							"theme": "dark",
-							"style": "1",
-							"locale": "zh_CN",
-							"toolbar_bg": "#f1f3f6",
-							"enable_publishing": false,
-							"withdateranges": true,
-							"range": "ytd",
-							"hide_side_toolbar": false,
-							"allow_symbol_change": true,
-							"watchlist": [
-								"FOREXCOM:DJI",
-								"FOREXCOM:XAUUSD",
-								"FOREXCOM:WTIUSD",
-								"FOREXCOM:EURUSD",
-								"FOREXCOM:USDJPY",
-								"FOREXCOM:GBPUSD",
-								"FOREXCOM:USDCHF",
-								"OANDA:SPX500USD",
-								"OANDA:NAS100USD",
-								"OANDA:HK33HKD",
-								"OANDA:UK100GBP",
-								"OANDA:XAGUSD",
-								"TVC:UKOIL"
-							],
-							"details": true,
-							"hotlist": true,
-							"calendar": true,
-							"news": [
-								"stocktwits",
-								"headlines"
-							],
-							"studies": [
-								"RSI@tv-basicstudies"
-							],
-							"show_popup_button": true,
-							"popup_width": "1000",
-							"popup_height": "650",
-							"no_referral_id": true,
-							"container_id": "tradingview_b46aa"
-						});
-					</script>
-				</div>
-			</div>
-		</div>-->
 		<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
 	</body>
 
