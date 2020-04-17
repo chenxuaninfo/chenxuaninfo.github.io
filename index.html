@@ -15,10 +15,150 @@
 		<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts-en.js"></script>
 		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	</head>
-
 	<body style="cursor: pointer; background: url(img/2020.jpg); width: 100%; height:1024px; position: absolute; top: 0px; left: 0px; z-index: 10000;">
 		<h1 align="center"><a title="ChenXuan.Info" href="http://chenxuan.info/"><img src="img/RGBB_L.png" width="88px" /></a></h1>
-		<div id="info" style="height:650px"></div>
+		
+		<div id="analyst" style="height:300px"></div>
+		<script>
+			var analystChart = echarts.init(document.getElementById("analyst"));
+			var analystdata = {};
+			analystChart.setOption(option =  {
+		    title: {
+		        text: '',
+		        left: 'center'
+		    },
+		    tooltip: {
+		        trigger: 'axis'
+		    },
+		    radar: [
+		        {
+		            indicator: [
+		                {text: '医械健康', max: 100},
+		                {text: '金融经济', max: 100},
+		                {text: '大数据', max: 100},
+		            ],
+		            name: {
+		                textStyle: {
+		                    color: 'white',
+		                    fontSize: 16,
+		                }
+		            },
+		            center: ['20%', '50%'],
+		            color:"blue",
+		            radius: 80
+		        },
+		        {
+		            indicator:[
+		                {text: '1. 数据采集', max: 100},
+		                {text: '2. 数据管理', max: 100},
+		                {text: '3. 数据处理', max: 100},
+		                {text: '4. 数据分析', max: 100},
+		                {text: '5. 数据可视化', max: 100},
+		                {text: '6. 数据分析报告', max: 100},
+		            ],
+		            name: {
+		                textStyle: {
+		                    color: 'white',
+		                    fontSize: 16,
+		                }
+		            },
+		           center: ['40%', '50%'],
+		            radius: 80
+		        },
+		        {
+		            indicator: [
+		                {text: 'Execl', max: 100},
+		                {text: 'PowerBI', max: 100},
+		                {text: 'FineBI', max: 100},
+		                {text: 'Tableau', max: 100},
+		                {text: 'MySQL', max: 100},
+		                {text: 'SPSS', max: 100},
+		                {text: 'Java', max: 100},
+		                {text: 'Python', max: 100},
+		                {text: 'Javascript', max: 100},
+		                {text: 'R', max: 100},
+		            ],
+		            name: {
+		                textStyle: {
+		                    color: 'white',
+		                    fontSize: 16,
+		                }
+		            },
+		            radius: 80,
+		             center: ['60%', '50%'],
+		        },
+		        {
+		            indicator: [
+		                {text: '哲学思维的抽象性', max: 100},
+		                {text: '哲学思维的批判性', max: 100},
+		                {text: '哲学思维的反思性', max: 100},
+		            ],
+		            name: {
+		                textStyle: {
+		                    color: 'white',
+		                    fontSize: 16,
+		                }
+		            },
+		            radius: 80,
+		             center: ['80%', '50%'],
+		        }
+		    ],
+		    series: [
+		        {
+            type: 'radar',
+            tooltip: {
+                trigger: 'item'
+            },
+            areaStyle: {color: 'red'},
+            data: [
+                {
+                    value: [70, 30, 50],
+                    name: '行业'
+                }
+            ]
+        },
+        {
+            type: 'radar',
+            radarIndex: 1,
+            areaStyle: {color: 'green' },
+            data: [
+                {
+                    value: [60, 60, 60, 60, 80, 70],
+                    name: '技能'
+                }
+            ]
+        },{
+            type: 'radar',
+            radarIndex: 2,
+            areaStyle: {color:  'blue'},
+            data: [
+                {
+                    value: [95, 90, 85, 80, 75, 0, 70, 50, 70, 0],
+                    name: '工具'
+                }
+            ]
+        },{
+            type: 'radar',
+            radarIndex: 3,
+            areaStyle: {color: 'yellow'},
+            data: [
+                {
+                    value: [10, 10, 10],
+                    name: '思维'
+                }
+            ]
+        },
+		    ]
+		}, true);
+			analyst.on('click', function(p) {
+				if(typeof p.data.link == 'undefined') {
+					return;
+				} else {
+					window.open(p.data.link);
+				}
+			});
+		</script>
+		<div id="info" style="height:350px"></div>
 		<script>
 			var infoChart = echarts.init(document.getElementById("info"));
 			var infodata = {
