@@ -16,16 +16,20 @@
 		<script type="text/javascript" src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 	</head>
 	<body style="cursor: pointer; background: url(img/2020.jpg); width: 100%; height:1024px; position: absolute; top: 0px; left: 0px; z-index: 10000;">
-		<h1 align="center"><a title="ChenXuan.Info" href="http://chenxuan.info/"><img src="img/RGBB_L.png" width="88px" /></a></h1>
-		
-		<div id="analyst" style="height:300px"></div>
+		<h1 align="center"><a title="ChenXuan.Info" href="http://chenxuan.info/"><img src="img/RGBB_L.png" width="150px" /></a></h1>
+		<hr />
+		<div id="analyst" style="height:600px"></div>
 		<script>
 			var analystChart = echarts.init(document.getElementById("analyst"));
 			var analystdata = {};
 			analystChart.setOption(option =  {
-		    title: {
-		        text: '',
-		        left: 'center'
+		     title: {
+		        text: '我的能力图',
+		        left: 'center',
+		        textStyle : {
+		             color: 'white',
+		             fontSize: 18
+		        }
 		    },
 		    tooltip: {
 		        trigger: 'axis'
@@ -34,8 +38,8 @@
 		        {
 		            indicator: [
 		                {text: '1.医械健康', max: 100},
-		                {text: '2.金融经济', max: 100},
-		                {text: '3.大数据', max: 100},
+		                {text: '2.金融投资', max: 100},
+		                {text: '3.财政经济', max: 100},
 		            ],
 		            name: {
 		                textStyle: {
@@ -43,9 +47,9 @@
 		                    fontSize: 16,
 		                }
 		            },
-		            center: ['15%', '50%'],
+		            center: ['30%', '70%'],
 		            color:"blue",
-		            radius: 80
+		            radius: 90
 		        },
 		        {
 		            indicator:[
@@ -62,8 +66,8 @@
 		                    fontSize: 16,
 		                }
 		            },
-		           center: ['38%', '50%'],
-		            radius: 80
+		           center: ['30%', '25%'],
+		            radius: 90
 		        },
 		        {
 		            indicator: [
@@ -84,8 +88,8 @@
 		                    fontSize: 16,
 		                }
 		            },
-		            radius: 80,
-		             center: ['62%', '50%'],
+		            radius: 90,
+		             center: ['70%', '25%'],
 		        },
 		        {
 		            indicator: [
@@ -99,8 +103,8 @@
 		                    fontSize: 16,
 		                }
 		            },
-		            radius: 80,
-		             center: ['85%', '50%'],
+		            radius: 90,
+		             center: ['70%', '70%'],
 		        }
 		    ],
 		    series: [
@@ -112,7 +116,7 @@
             areaStyle: {color: 'red'},
             data: [
                 {
-                    value: [70, 30, 50],
+                    value: [70, 50, 60],
                     name: '行业'
                 }
             ]
@@ -143,27 +147,33 @@
             areaStyle: {color: 'yellow'},
             data: [
                 {
-                    value: [10, 10, 10],
+                    value: [20, 20, 20],
                     name: '思维'
                 }
             ]
         },
 		    ]
 		}, true);
-			analyst.on('click', function(p) {
-				if(typeof p.data.link == 'undefined') {
-					return;
-				} else {
-					window.open(p.data.link);
-				}
-			});
 		</script>
-		<div id="info" style="height:350px"></div>
+		<hr />
+		<div id="info" style="height:650px"></div>
 		<script>
 			var infoChart = echarts.init(document.getElementById("info"));
 			var infodata = {
-				"name": "ChenXuan.Info\n(点小圈圈跳转)",
-				"children": [{
+				"name": "ChenXuan.Info",
+				"children": [ {
+					"name": "我的国家统计局作品",
+					"children": [{
+						"name": "卫生",
+						"link": "./demo/卫生.html",
+					},{
+						"name": "金融业",
+						"link": "./demo/金融业.html",
+					},{
+						"name": "财政",
+						"link": "./demo/财政.html",
+					}]
+				},{
 					"name": "我的博客",
 					"children": [{
 						"name": "ChenXuan.Info",
@@ -180,14 +190,14 @@
 					"name": "我的微信公众号",
 					"children": [{
 						"name": "AnalystX",
-						"link": "http://chenxuan.info/img/AnalystX.jpeg",
+						"link": "./img/AnalystX.jpeg",
 					}]
 
 				},{
 					"name": "我的微信",
 					"children": [{
 						"name": "15771737759",
-						"link": "http://chenxuan.info/img/Wechat.png",
+						"link": "./img/Wechat.png",
 					}]
 
 				}, {
@@ -199,6 +209,14 @@
 				}]
 			};
 			infoChart.setOption(option = {
+				 title: {
+		        text: '我的导航(点小圈圈跳转)',
+		        left: 'center',
+		        textStyle : {
+		             color: 'white',
+		             fontSize: 18
+		        }
+		    },
 				tooltip: {
 					trigger: 'item',
 					triggerOn: 'mousemove'
@@ -214,12 +232,10 @@
 					right: '25%',
 
 					symbolSize: 16,
-
 					nodeClick: "link",
 					label: {
 						normal: {
 							position: 'left',
-							verticalAlign: 'middle',
 							align: 'right',
 							fontSize: 16,
 							color: 'white'
@@ -250,7 +266,15 @@
 					window.open(p.data.link);
 				}
 			});
+			infoChart.on('click', function(p) {
+				if(typeof p.data.link == 'undefined') {
+					return;
+				} else {
+					window.open(p.data.link);
+				}
+			});
 		</script>
+		<hr />
 		<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
 	</body>
 
