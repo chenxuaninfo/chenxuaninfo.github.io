@@ -19,6 +19,152 @@
 		<h1 align="center"><a title="ChenXuan.Info" href="http://chenxuan.info/"><img src="img/RGBB_L.png" width="88px" /></a></h1>
 		<h3 align="center" style="color: white;">天道酬勤,地道酬善;人道酬诚,商道酬信;业道酬精,学道酬苦;艺道酬心,爱道酬啥? -《周易》</h3>
 		<hr />
+		<div id="info" style="height:550px"></div>
+		<script>
+			var infoChart = echarts.init(document.getElementById("info"));
+			var infodata = {
+				"name": "ChenXuan.Info\n(点小圈圈跳转)",
+				"children": [ {
+					"name": "我的服务",
+					"children": [{
+						"name": "数据分析服务",
+						"link": "https://www.yuque.com/analysisgroup/services",
+					},{
+						"name": "企业报表门户",
+						"link": "https://www.yuque.com/analysisgroup/reportportal",
+					},{
+						"name": "数据可视化大屏",
+						"link": "https://www.yuque.com/analysisgroup/desktop",
+					}]
+				},{
+					"name": "我的国统局作品",
+					"children": [{
+						"name": "综合分析",
+						"link": "./demo/综合.html",
+					},{
+						"name": "卫生分析",
+						"link": "./demo/卫生.html",
+					},{
+						"name": "金融业分析",
+						"link": "./demo/金融业.html",
+					},{
+						"name": "财政分析",
+						"link": "./demo/财政.html",
+					}]
+				},{
+					"name": "我的博客",
+					"children": [{
+						"name": "ChenXuan.Info",
+						"link": "http://chenxuan.info/",
+					}]
+				},{
+					"name": "我的证书",
+					"children": [{
+						"name": "帆软@报表工程师@FCRA&FCRP",
+						"link": "https://bbs.fanruan.com/verify",
+					},{
+						"name": "帆软@BI工程师@FCBA&FCRP",
+						"link": "https://bbs.fanruan.com/verify",
+					},{
+						"name": "帆软@数据运营官@FCAA&FCAP",
+						"link": "https://bbs.fanruan.com/verify",
+					}]
+				},{
+					"name": "我的图书",
+					"children": [{
+						"name": "数据分析笔记@Analyst",
+						"link": "https://www.yuque.com/chenxuaninfo/analyst",
+					}]
+
+				},{
+					"name": "我的微信公众号",
+					"children": [{
+						"name": "数据分析@AnalystX",
+						"link": "./img/AnalystX.jpeg",
+					}]
+
+				},{
+					"name": "我的微信",
+					"children": [{
+						"name": "15771737759",
+						"link": "./img/Wechat.png",
+					}]
+
+				}, {
+					"name": "我的邮箱",
+					"children": [{
+						"name": "www@ChenXuan.Info",
+						"link": "mailto:www@chenxuan.info",
+					}]
+				}]
+			};
+			infoChart.setOption(option = {
+				 title: {
+			        text: '',
+			        left: 'center',
+			        textStyle : {
+			             color: 'white',
+			             fontSize: 18
+			        }
+		    },
+				tooltip: {
+					trigger: 'item',
+					triggerOn: 'mousemove'
+				},
+				series: [{
+					type: 'tree',
+
+					name: '博客导航',
+
+					data: [infodata],
+
+					left: '15%',
+					right: '25%',
+
+					symbolSize: 16,
+					nodeClick: "link",
+					label: {
+						normal: {
+							position: 'left',
+							align: 'right',
+							fontSize: 16,
+							color: 'white'
+						}
+
+					},
+					leaves: {
+						label: {
+							normal: {
+								position: 'right',
+								verticalAlign: 'middle',
+								align: 'left',
+								color: 'white'
+							}
+						}
+					},
+					expandAndCollapse: true,
+					initialTreeDepth: 6,
+					animationDuration: 550,
+					animationDurationUpdate: 750
+
+				}]
+			}, true);
+			infoChart.on('click', function(p) {
+				if(typeof p.data.link == 'undefined') {
+					return;
+				} else {
+					window.open(p.data.link);
+				}
+			});
+			infoChart.on('click', function(p) {
+				if(typeof p.data.link == 'undefined') {
+					return;
+				} else {
+					window.open(p.data.link);
+				}
+			});
+		</script>
+		<hr />
 		<div id="analyst" style="height:500px"></div>
 		<script>
 			var analystChart = echarts.init(document.getElementById("analyst"));
@@ -162,152 +308,6 @@
         },
 		    ]
 		}, true);
-		</script>
-		<hr />
-		<div id="info" style="height:650px"></div>
-		<script>
-			var infoChart = echarts.init(document.getElementById("info"));
-			var infodata = {
-				"name": "ChenXuan.Info",
-				"children": [ {
-					"name": "我的服务",
-					"children": [{
-						"name": "数据分析服务",
-						"link": "https://www.yuque.com/analysisgroup/services",
-					},{
-						"name": "企业报表门户",
-						"link": "https://www.yuque.com/analysisgroup/reportportal",
-					},{
-						"name": "数据可视化大屏",
-						"link": "https://www.yuque.com/analysisgroup/desktop",
-					}]
-				},{
-					"name": "我的国统局作品",
-					"children": [{
-						"name": "综合分析",
-						"link": "./demo/综合.html",
-					},{
-						"name": "卫生分析",
-						"link": "./demo/卫生.html",
-					},{
-						"name": "金融业分析",
-						"link": "./demo/金融业.html",
-					},{
-						"name": "财政分析",
-						"link": "./demo/财政.html",
-					}]
-				},{
-					"name": "我的博客",
-					"children": [{
-						"name": "ChenXuan.Info",
-						"link": "http://chenxuan.info/",
-					}]
-				},{
-					"name": "我的证书",
-					"children": [{
-						"name": "帆软@报表工程师@FCRA&FCRP",
-						"link": "https://bbs.fanruan.com/verify",
-					},{
-						"name": "帆软@BI工程师@FCBA&FCRP",
-						"link": "https://bbs.fanruan.com/verify",
-					},{
-						"name": "帆软@数据运营官@FCAA&FCAP",
-						"link": "https://bbs.fanruan.com/verify",
-					}]
-				},{
-					"name": "我的图书",
-					"children": [{
-						"name": "数据分析笔记@Analyst",
-						"link": "https://www.yuque.com/chenxuaninfo/analyst",
-					}]
-
-				},{
-					"name": "我的微信公众号",
-					"children": [{
-						"name": "数据分析@AnalystX",
-						"link": "./img/AnalystX.jpeg",
-					}]
-
-				},{
-					"name": "我的微信",
-					"children": [{
-						"name": "15771737759",
-						"link": "./img/Wechat.png",
-					}]
-
-				}, {
-					"name": "我的邮箱",
-					"children": [{
-						"name": "www@ChenXuan.Info",
-						"link": "mailto:www@chenxuan.info",
-					}]
-				}]
-			};
-			infoChart.setOption(option = {
-				 title: {
-		        text: '我的导航(点小圈圈跳转)',
-		        left: 'center',
-		        textStyle : {
-		             color: 'white',
-		             fontSize: 18
-		        }
-		    },
-				tooltip: {
-					trigger: 'item',
-					triggerOn: 'mousemove'
-				},
-				series: [{
-					type: 'tree',
-
-					name: '博客导航',
-
-					data: [infodata],
-
-					left: '15%',
-					right: '25%',
-
-					symbolSize: 16,
-					nodeClick: "link",
-					label: {
-						normal: {
-							position: 'left',
-							align: 'right',
-							fontSize: 16,
-							color: 'white'
-						}
-
-					},
-					leaves: {
-						label: {
-							normal: {
-								position: 'right',
-								verticalAlign: 'middle',
-								align: 'left',
-								color: 'white'
-							}
-						}
-					},
-					expandAndCollapse: true,
-					initialTreeDepth: 6,
-					animationDuration: 550,
-					animationDurationUpdate: 750
-
-				}]
-			}, true);
-			infoChart.on('click', function(p) {
-				if(typeof p.data.link == 'undefined') {
-					return;
-				} else {
-					window.open(p.data.link);
-				}
-			});
-			infoChart.on('click', function(p) {
-				if(typeof p.data.link == 'undefined') {
-					return;
-				} else {
-					window.open(p.data.link);
-				}
-			});
 		</script>
 		<hr />
 		<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
