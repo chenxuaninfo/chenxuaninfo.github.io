@@ -100,7 +100,7 @@
 			};
 			infoChart.setOption(option = {
 				 title: {
-			        text: '',
+			        text: '博客&服务',
 			        left: 'center',
 			        textStyle : {
 			             color: 'white',
@@ -164,6 +164,141 @@
 				}
 			});
 		</script>
+		<hr />
+		<div id="infonetwork" style="height:999px"></div>
+
+    <script>
+
+      var infonetworkChart = echarts.init(document.getElementById("infonetwork"));
+
+      infonetworkChart.showLoading();
+
+      $.get('data/flare.json', function(data2) {
+
+        infonetworkChart.hideLoading();
+
+
+        infonetworkChart.setOption(option = {
+		 title: {
+		        text: '网站&工具',
+		        left: 'center',
+		        textStyle : {
+		             color: 'white',
+		             fontSize: 18
+		        }
+		    },
+          tooltip: {
+
+            trigger: 'item',
+
+            triggerOn: 'mousemove'
+
+          },
+
+          series: [{
+
+            type: 'tree',
+
+
+            name: 'Web网站导航',
+
+
+            data: [data2],
+
+
+            left: '10%',
+
+            right: '20%',
+
+
+            symbolSize: 16,
+
+
+            label: {
+
+              normal: {
+
+                position: 'left',
+
+                verticalAlign: 'middle',
+
+                align: 'right',
+
+                color: '#00000'
+
+              }
+
+            },
+
+
+            nodeClick: "link",
+
+            label: {
+
+              normal: {
+
+                position: 'left',
+
+                verticalAlign: 'middle',
+
+                align: 'right',
+
+                fontSize: 16,
+
+                color: '#00000'
+
+              }
+
+            },
+
+            leaves: {
+
+              label: {
+
+                normal: {
+
+                  position: 'right',
+
+                  verticalAlign: 'middle',
+
+                  align: 'left'
+
+                }
+
+              }
+
+            },
+
+            expandAndCollapse: true,
+
+            initialTreeDepth: 6,
+
+            animationDuration: 550,
+
+            animationDurationUpdate: 750
+
+
+          }]
+
+        }, true);
+
+        infonetworkChart.on('click', function(p) {
+
+          if(typeof p.data.link == 'undefined') {
+
+            return;
+
+          } else {
+
+            window.open(p.data.link);
+
+          }
+
+        })
+
+      });
+
+    </script>
 		<hr />
 		<div id="analyst" style="height:500px"></div>
 		<script>
@@ -311,6 +446,216 @@
 		</script>
 		<hr />
 		<script type="text/javascript" src="//rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0" async="async"></script>
+		<hr />
+		<div class="row">
+
+      <div class="col-xs-12 col-sm-12">
+
+        <div class="tradingview-widget-container">
+
+          <div class="tradingview-widget-container__widget"></div>
+
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-tickers.js" async>
+
+            {
+
+              "symbols": [{
+
+                  "description": "黄金",
+
+                  "proName": "FOREXCOM:XAUUSD"
+
+                },
+
+                {
+
+                  "description": "美原油",
+
+                  "proName": "FOREXCOM:WTIUSD"
+
+                },
+
+                {
+
+                  "description": "欧元/美元",
+
+                  "proName": "FX:EURUSD"
+
+                },
+
+                {
+
+                  "description": "道琼斯指数",
+
+                  "proName": "FOREXCOM:DJI"
+
+                },
+
+                {
+
+                  "description": "上证指数",
+
+                  "proName": "SSE:000001"
+
+                },
+
+                {
+
+                  "description": "标普500",
+
+                  "proName": "OANDA:SPX500USD"
+
+                },
+
+                {
+
+                  "description": "纳斯达克100",
+
+                  "proName": "OANDA:NAS100USD"
+
+                },
+
+                {
+
+                  "description": "深证综指",
+
+                  "proName": "SZSE:399106"
+
+                },
+
+                {
+
+                  "description": "恒生指数",
+
+                  "proName": "HKEX:24300"
+
+                }
+
+              ],
+
+              "colorTheme": "dark",
+
+              "isTransparent": false,
+
+              "locale": "zh_CN"
+
+            }
+
+          </script>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="col-xs-12 col-sm-12">
+
+        <div class="tradingview-widget-container">
+
+          <div id="tradingview_b46aa" style="height: 800px;"></div>
+
+          <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+
+          <script type="text/javascript">
+
+            new TradingView.widget({
+
+              "autosize": true,
+
+              "symbol": "FOREXCOM:DJI",
+
+              "timezone": "Etc/UTC",
+
+              "theme": "dark",
+
+              "style": "1",
+
+              "locale": "zh_CN",
+
+              "toolbar_bg": "#f1f3f6",
+
+              "enable_publishing": false,
+
+              "withdateranges": true,
+
+              "range": "ytd",
+
+              "hide_side_toolbar": false,
+
+              "allow_symbol_change": true,
+
+              "watchlist": [
+
+                "FOREXCOM:DJI",
+
+                "FOREXCOM:XAUUSD",
+
+                "FOREXCOM:WTIUSD",
+
+                "FOREXCOM:EURUSD",
+
+                "FOREXCOM:USDJPY",
+
+                "FOREXCOM:GBPUSD",
+
+                "FOREXCOM:USDCHF",
+
+                "OANDA:SPX500USD",
+
+                "OANDA:NAS100USD",
+
+                "OANDA:HK33HKD",
+
+                "OANDA:UK100GBP",
+
+                "OANDA:XAGUSD",
+
+                "TVC:UKOIL"
+
+              ],
+
+              "details": true,
+
+              "hotlist": true,
+
+              "calendar": true,
+
+              "news": [
+
+                "stocktwits",
+
+                "headlines"
+
+              ],
+
+              "studies": [
+
+                "RSI@tv-basicstudies"
+
+              ],
+
+              "show_popup_button": true,
+
+              "popup_width": "1000",
+
+              "popup_height": "650",
+
+              "no_referral_id": true,
+
+              "container_id": "tradingview_b46aa"
+
+            });
+
+          </script>
+
+        </div>
+
+      </div>
+
+    </div>
 	</body>
 
 </html>
