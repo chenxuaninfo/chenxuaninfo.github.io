@@ -1,0 +1,32 @@
+{
+    "关于我": {
+        "name": "ChenXuan.Info",
+        "children": [
+            {
+                "name": "ChenXuan",
+                "link": "ChenXuan.Info",
+                "value": 1
+            }
+        ]
+    },
+    "工具箱": {
+        "name": "搜索引擎",
+        "children": [
+            {
+                "name": "百度",
+                "link": "https://www.baidu.com/",
+                "value": 1
+            },
+            {
+                "name": "必应",
+                "link": "https: //cn.bing.com",
+                "value": 2
+            },
+            {
+                "name": "谷歌",
+                "link": "https: //google.com",
+                "value": 3
+            }
+        ]
+    }
+}

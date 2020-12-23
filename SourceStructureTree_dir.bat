@@ -1,1 +1,1 @@
-sdir /b  /on >SourceStructureTree.txt
+dir /b  /on >SourceStructureTree.txt

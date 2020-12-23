@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<o>
+     <关于我 class="object">
+          <children class="array">
+               <e class="object">
+                    <link type="string">ChenXuan.Info</link>
+                    <name type="string">ChenXuan</name>
+                    <value type="number">1</value>
+               </e>
+          </children>
+          <name type="string">ChenXuan.Info</name>
+     </关于我>
+     <工具箱 class="object">
+          <children class="array">
+               <e class="object">
+                    <link type="string">https://www.baidu.com/</link>
+                    <name type="string">百度</name>
+                    <value type="number">1</value>
+               </e>
+               <e class="object">
+                    <link type="string">https: //cn.bing.com</link>
+                    <name type="string">必应</name>
+                    <value type="number">2</value>
+               </e>
+               <e class="object">
+                    <link type="string">https: //google.com</link>
+                    <name type="string">谷歌</name>
+                    <value type="number">3</value>
+               </e>
+          </children>
+          <name type="string">搜索引擎</name>
+     </工具箱>
+</o>
