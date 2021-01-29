@@ -38,134 +38,133 @@
 <!-- style="background-color:rgb(33, 115, 70)" -->
 
 <body>
-	<!-- class="container" -->
-	<div>
-		<img id='img' src="01/img/dna-3656587_1280.jpg">
-		<!-- <h3 align="center" style="margin-top:0px;margin-bottom:0px"><a title="ChenXuan.Info"
+
+	<img id='img' src="01/img/dna-3656587_1280.jpg">
+	<!-- <h3 align="center" style="margin-top:0px;margin-bottom:0px"><a title="ChenXuan.Info"
 			href="http://chenxuan.info/"><img src="01/img/RGBB_L.png" width="88px" /></a></h3> -->
-		<!-- <h3 align="center" style="color: white;">AnalystX.Net</h3> -->
-		<div id="info" style="height:500px"></div>
-		<script>
-			var infoChart = echarts.init(document.getElementById("info"));
-			var infodata = {
-				"name": "ChenXuan.Info",
+	<!-- <h3 align="center" style="color: white;">AnalystX.Net</h3> -->
+	<script type="text/javascript"
+		src="https://rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;s=180"
+		async="async"></script>
+	<div id="info" style="height:500px"></div>
+	<script>
+		var infoChart = echarts.init(document.getElementById("info"));
+		var infodata = {
+			"name": "ChenXuan.Info",
+			"children": [{
+				"name": "金融分析师",
+				"link": "https://www.yuque.com/chenxuaninfo/cfa"
+			}, {
+				"name": "数据分析师",
+				"link": "https://www.yuque.com/chenxuaninfo/analyst",
 				"children": [{
-					"name": "金融分析师",
-					"link": "https://www.yuque.com/chenxuaninfo/cfa"
+					"name": "Execl",
+					"link": "https://www.microsoft.com/en-us/microsoft-365/excel"
 				}, {
-					"name": "数据分析师",
-					"link": "https://www.yuque.com/chenxuaninfo/analyst",
+					"name": "PowerBI",
+					"link": "https://powerbi.microsoft.com/zh-cn/"
+				}, {
+					"name": "Python",
+					"link": "https://www.python.org/"
+				}, {
+					"name": "MySQL",
+					"link": "https://dev.mysql.com/doc/",
 					"children": [{
-						"name": "Execl",
-						"link": "https://www.microsoft.com/en-us/microsoft-365/excel"
+						"name": "Kettle",
+						"link": "https://github.com/pentaho/pentaho-kettle"
 					}, {
-						"name": "PowerBI",
-						"link": "https://powerbi.microsoft.com/zh-cn/"
+						"name": "Apache Kylin",
+						"link": "https://kylin.apache.org/"
 					}, {
-						"name": "Python",
-						"link": "https://www.python.org/"
+						"name": "Apache Hive",
+						"link": "https://hive.apache.org/"
 					}, {
-						"name": "MySQL",
-						"link": "https://dev.mysql.com/doc/",
-						"children": [{
-							"name": "Kettle",
-							"link": "https://github.com/pentaho/pentaho-kettle"
-						}, {
-							"name": "Apache Kylin",
-							"link": "https://kylin.apache.org/"
-						}, {
-							"name": "Apache Hive",
-							"link": "https://hive.apache.org/"
-						}, {
-							"name": "Apache Spark",
-							"link": "http://spark.apache.org/"
-						}, {
-							"name": "MaxCompute",
-							"link": "https://help.aliyun.com/product/27797.html"
-						}, {
-							"name": "DataWorks",
-							"link": "https://helpcdn.aliyun.com/product/72772.html"
-						}, {
-							"name": "DataHub",
-							"link": "https://help.aliyun.com/product/53345.html"
-						}]
+						"name": "Apache Spark",
+						"link": "http://spark.apache.org/"
 					}, {
-						"name": "Echarts",
-						"link": "https://echarts.apache.org/examples/zh/index.html"
+						"name": "MaxCompute",
+						"link": "https://help.aliyun.com/product/27797.html"
 					}, {
-						"name": "AntV",
-						"link": "https://antv.vision/zh/"
+						"name": "DataWorks",
+						"link": "https://helpcdn.aliyun.com/product/72772.html"
 					}, {
-						"name": "D3JS",
-						"link": "https://d3js.org/"
+						"name": "DataHub",
+						"link": "https://help.aliyun.com/product/53345.html"
 					}]
 				}, {
-					"name": "网站导航",
-					"link": "sitemap/index.html"
+					"name": "Echarts",
+					"link": "https://echarts.apache.org/examples/zh/index.html"
+				}, {
+					"name": "AntV",
+					"link": "https://antv.vision/zh/"
+				}, {
+					"name": "D3JS",
+					"link": "https://d3js.org/"
 				}]
-			};
-			infoChart.setOption(option = {
-				title: {
-					text: '',
-					left: 'center',
-					textStyle: {
-						color: 'white',
-						fontSize: 16
+			}, {
+				"name": "网站导航",
+				"link": "sitemap/index.html"
+			}]
+		};
+		infoChart.setOption(option = {
+			title: {
+				text: '',
+				left: 'center',
+				textStyle: {
+					color: 'white',
+					fontSize: 16
+				}
+			},
+			tooltip: {
+				trigger: 'item',
+				triggerOn: 'mousemove'
+			},
+			series: [{
+				type: 'tree',
+
+				name: '博客导航',
+
+				data: [infodata],
+				left: '10%',
+				right: '10%',
+				orient: 'vertical',
+				symbolSize: 10,
+				nodeClick: "link",
+				label: {
+					normal: {
+						position: 'top',
+						align: 'center',
+						fontSize: 16,
+						color: 'white'
 					}
-				},
-				tooltip: {
-					trigger: 'item',
-					triggerOn: 'mousemove'
-				},
-				series: [{
-					type: 'tree',
 
-					name: '博客导航',
-
-					data: [infodata],
-					left: '10%',
-					right: '10%',
-					orient: 'vertical',
-					symbolSize: 10,
-					nodeClick: "link",
+				},
+				leaves: {
 					label: {
 						normal: {
-							position: 'top',
+							position: 'bottom',
+							verticalAlign: 'middle',
 							align: 'center',
-							fontSize: 16,
 							color: 'white'
 						}
+					}
+				},
+				expandAndCollapse: true,
+				initialTreeDepth: 6,
+				animationDuration: 550,
+				animationDurationUpdate: 750
 
-					},
-					leaves: {
-						label: {
-							normal: {
-								position: 'bottom',
-								verticalAlign: 'middle',
-								align: 'center',
-								color: 'white'
-							}
-						}
-					},
-					expandAndCollapse: true,
-					initialTreeDepth: 6,
-					animationDuration: 550,
-					animationDurationUpdate: 750
+			}]
+		}, true);
+		infoChart.on('click', function (p) {
+			if (typeof p.data.link == 'undefined') {
+				return;
+			} else {
+				window.open(p.data.link);
+			}
+		});
+	</script>
 
-				}]
-			}, true);
-			infoChart.on('click', function (p) {
-				if (typeof p.data.link == 'undefined') {
-					return;
-				} else {
-					window.open(p.data.link);
-				}
-			});
-		</script>
-		<script type="text/javascript"
-			src="https://rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;s=180"
-			async="async"></script>
-	</div>
 </body>
 
 </html>
