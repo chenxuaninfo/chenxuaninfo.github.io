@@ -28,25 +28,22 @@
 	style="cursor: pointer; background: url(01/img/2020.jpg); width: 100%; height:1024px; position: absolute; top: 0px; left: 0px; z-index: 10000;">
 	<h1 align="center"><a title="ChenXuan.Info" href="http://chenxuan.info/"><img src="01/img/RGBB_L.png"
 				width="88px" /></a></h1>
-	<h3 align="center" style="color: white;">AnalystX.Net</h3>
+	<!-- <h3 align="center" style="color: white;">AnalystX.Net</h3> -->
 	<div id="info" style="height:500px"></div>
 	<script>
 		var infoChart = echarts.init(document.getElementById("info"));
 		var infodata = {
 			"name": "ChenXuan.Info",
 			"children": [{
-				"name": "我的图书",
-				"children": [{
-					"name": "《数据分析师》",
+					"name": "数据分析师",
 					"link": "https://www.yuque.com/chenxuaninfo/analyst",
 				}, {
-					"name": "《金融分析师》",
+					"name": "金融分析师",
 					"link": "https://www.yuque.com/chenxuaninfo/cfa",
 				}, {
 					"name": "MySQL",
-					"link": "https://www.yuque.com/chenxuaninfo/cfa",
+					"link": "mysql/index.html",
 				}]
-			}]
 		};
 		infoChart.setOption(option = {
 			title: {
@@ -67,11 +64,10 @@
 				name: '博客导航',
 
 				data: [infodata],
-
-				left: '15%',
-				right: '15%',
-				orient: 'vertical',
-				symbolSize: 7,
+				left: '25%',
+				right: '25%',
+				orient: 'vertical',	
+				symbolSize: 10,
 				nodeClick: "link",
 				label: {
 					normal: {
@@ -107,9 +103,9 @@
 			}
 		});
 	</script>
-	<!--  <script type="text/javascript"
+	 <!-- <script type="text/javascript"
 		src="//rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0"
-		async="async"></script> -->
+		async="async"></script>  -->
 </body>
 
 </html>
