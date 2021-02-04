@@ -1,10 +1,143 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="utf-8">
-		 <meta http-equiv="refresh" content="0.001;url=./sitemap/index.html">
-		<title></title>
-	</head>
-	<body>
-	</body>
+<html lang="cn">
+
+<head>
+	<meta http-equiv="Content-Language" content="zh-CN">
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="keywords" content="chenxuan.info" />
+	<meta name="description" content="chenxuan.info" />
+	<title>ChenXuan.Info</title>
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="01/img/RGBW_L.png">
+	<link rel="shortcut icon" href="01/img/RGBW_L.png">
+	<link href="01/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/echarts/4.4.0-rc.1/echarts-en.js"></script>
+	<script type="text/javascript" src="01/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-172954376-1"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+		gtag('config', 'UA-172954376-1');
+	</script>
+	<style>
+		#img {
+			z-index: -1;
+			filter: alpha(opacity=85);
+			/*设置透明度，针对 IE8 以及更早的版本。IE9, Firefox, Chrome, Opera 和 Safari 使用属性 opacity 来设定透明度。opacity 属性能够设置的值从 0.0 到 1.0。值越小，越透明。*/
+			position: absolute;
+			/*这里要注意一下，需要设置成 absolute，绝对定位。绝对定位使元素的位置与文档流无关，因此不占据空间*/
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<!-- style="cursor: pointer; background: url(01/img/iss063e068417_lrg.jpg); width: 100%; height:1024px; position: absolute; top: 0px; left: 0px; z-index: 10000;" -->
+<!-- style="background-color:rgb(33, 115, 70)" -->
+
+<body>
+
+	<img id='img' src="01/img/dna-3656587_1280.jpg">
+	<!-- <h3 align="center" style="margin-top:0px;margin-bottom:0px"><a title="ChenXuan.Info"
+			href="http://chenxuan.info/"><img src="01/img/RGBB_L.png" width="88px" /></a></h3> -->
+	<div id="info" style="height:500px"></div>
+	<script>
+		var infoChart = echarts.init(document.getElementById("info"));
+		var infodata = {
+			"name": "ChenXuan.Info",
+			"link": "http://chenxuan.info/about.html",
+			"children": [{
+				"name": "MySQL",
+				"link": "./mysql/index.html"
+
+			}, {
+				"name": "DataAnalyst",
+				"link": "https://www.yuque.com/chenxuaninfo/analyst",
+				"children": [{
+					"name": "Execl",
+					"link": "https://www.microsoft.com/en-us/microsoft-365/excel"
+				}, {
+					"name": "PowerBI",
+					"link": "https://powerbi.microsoft.com/zh-cn/"
+				}, {
+					"name": "Python",
+					"link": "https://www.python.org/"
+				}, {
+					"name": "AntV",
+					"link": "https://antv.vision/zh/"
+				}, {
+					"name": "Edrawsoft",
+					"link": "https://www.edrawsoft.cn/"
+				}]
+			}, {
+				"name": "SiteMap",
+				"link": "sitemap/index.html"
+			}]
+		};
+		infoChart.setOption(option = {
+			title: {
+				text: '',
+				left: 'center',
+				textStyle: {
+					color: 'white',
+					fontSize: 16
+				}
+			},
+			tooltip: {
+				trigger: 'item',
+				triggerOn: 'mousemove'
+			},
+			series: [{
+				type: 'tree',
+				name: '博客导航',
+				data: [infodata],
+				left: '1%',
+				right: '1%',
+				orient: 'vertical',
+				symbolSize: 8,
+				nodeClick: "link",
+				label: {
+					normal: {
+						position: 'top',
+						align: 'center',
+						fontSize: 16,
+						color: 'white'
+					}
+
+				},
+				leaves: {
+					label: {
+						normal: {
+							position: 'bottom',
+							verticalAlign: 'middle',
+							align: 'center',
+							color: 'white'
+						}
+					}
+				},
+				expandAndCollapse: true,
+				initialTreeDepth: 2,
+				animationDuration: 550,
+				animationDurationUpdate: 750
+
+			}]
+		}, true);
+		infoChart.on('click', function (p) {
+			if (typeof p.data.link == 'undefined') {
+				return;
+			} else {
+				window.open(p.data.link);
+			}
+		});
+	</script>
+	<h3 align="center" style="margin-top:0px;margin-bottom:0px">
+		<script type="text/javascript"
+			src="https://rf.revolvermaps.com/0/0/6.js?i=0fgtfhfuqf5&amp;m=0&amp;c=ff0000&amp;cr1=ffffff&amp;f=arial&amp;l=0&amp;s=180"
+			async="async"></script>
+	</h3>
+	<!-- <h3 align="center" style="color: white;">AnalystX.Net</h3> -->
+</body>
+
 </html>
