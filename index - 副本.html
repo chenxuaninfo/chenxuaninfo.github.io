@@ -47,12 +47,21 @@
 	<script>
 		var infoChart = echarts.init(document.getElementById("info"));
 		var infodata = {
-			"name": "SiteMap",
-			"link": "./sitemap/index.html",
-			"children": [ {
+			"name": "ChenXuan.Info",
+			// "link": "http://chenxuan.info/index.html",
+			"children": [{
+				"name": "SiteMap",
+				"link": "./sitemap/index.html"
+			}, {
 				"name": "Data Analysis",
-				"link": "https://www.yuque.com/chenxuaninfo/analyst",
-				"children": [ {
+				"link": "https://www.yuque.com/chenxuaninfo/analyst"
+
+			}, {
+				"name": "Data Analysis",
+				"children": [{
+					"name": "Execl",
+					"link": "https://www.yuque.com/chenxuaninfo/execl"
+				}, {
 					"name": "PowerBI",
 					"link": "https://www.yuque.com/chenxuaninfo/powerbi"
 				}, {
@@ -112,6 +121,12 @@
 					"name": "Edrawsoft",
 					"link": "https://www.edrawsoft.cn/"
 				}]
+			}, {
+				"name": "Business Analytics",
+				"link": "https://www.yuque.com/chenxuaninfo/zrrzgy"
+			}, {
+				"name": "Data Visualization",
+				"link": "https://www.yuque.com/chenxuaninfo/oo1mnh"
 			}]
 		};
 		infoChart.setOption(option = {
