@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Blockchain</title>
+		<!-- CSS -->
+		<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="css/docs.min.css">
+		<link rel="stylesheet" href="css/poole.css">
+		<link rel="stylesheet" href="css/lanyon.css">
+		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+		<!-- Icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/red.png">
+		<link rel="shortcut icon" href="img/red.png">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/echarts.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	</head>
+
+	<body class="theme-base-08">
+
+		<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+		<!-- Toggleable sidebar -->
+		<div class="sidebar" id="sidebar">
+			<div class="sidebar-item">
+				<a href="#" target="_blank">Blockchain Bitcoin</p>
+					<p>
+						<a target="_blank" href="https://qiwi.com/"></a>
+					</p>
+			</div>
+
+			<nav class="sidebar-nav">
+				<a class="sidebar-nav-item active" target="_blank" href="/"><i class="fab fa-accessible-icon"></i>i-a.vip</a>
+				<a class="sidebar-nav-item" href="#区块链项目推荐">区块链项目推荐</a>
+				<a class="sidebar-nav-item" href="#社交平台">社交平台</a>
+				<a class="sidebar-nav-item" href="#比特币交易所">比特币交易所</a>
+				<a class="sidebar-nav-item" href="#行情可视">行情可视</a>
+				<a class="sidebar-nav-item" href="#钱包">钱包</a>
+				<a class="sidebar-nav-item" href="#区块链浏览器">区块链浏览器</a>
+				<a class="sidebar-nav-item" href="#区块链资讯">区块链资讯</a>
+				<a class="sidebar-nav-item" href="#众筹">众筹</a>
+				<a class="sidebar-nav-item" href="#投资机构">投资机构</a>
+				<a class="sidebar-nav-item" href="#区块链实验室">区块链实验室</a>
+				<a class="sidebar-nav-item" href="#区块链安全">区块链安全</a>
+				<a class="sidebar-nav-item" href="#Dapp">Dapp</a>
+				<!--<span class="sidebar-nav-item">-----------</span>-->
+			</nav>
+
+			<div class="sidebar-item">
+				<p>
+					&copy;2019.
+					<a href="index.html">About.me</a> All rights reserved. Currently v8.8.8
+				</p>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="masthead">
+				<div class="container">
+					<h3 class="masthead-title">
+	            <a href="/" title="Home">Blockchain</a>
+	            <small>Bitcoin</small>
+	          </h3>
+				</div>
+			</div>
+			<div class="container content">
+				<!--<div class="row">
+					<div class="col-md-12">
+						<div id="bitcoin" style="height:666px;"></div>
+						<script>
+							// 基于准备好的dom，初始化echarts实例
+							var bitcoinChart = echarts.init(document.getElementById("bitcoin"));
+							bitcoinChart.showLoading();
+							var option;
+							var indices = {
+								name: 0,
+								group: 1,
+								id: 16
+							};
+							var schema = [{
+									name: 'name',
+									index: 0
+								},
+								{
+									name: 'group',
+									index: 1
+								},
+								{
+									name: 'protein',
+									index: 2
+								},
+								{
+									name: 'calcium',
+									index: 3
+								},
+								{
+									name: 'sodium',
+									index: 4
+								},
+								{
+									name: 'fiber',
+									index: 5
+								},
+								{
+									name: 'vitaminc',
+									index: 6
+								},
+								{
+									name: 'potassium',
+									index: 7
+								},
+								{
+									name: 'carbohydrate',
+									index: 8
+								},
+								{
+									name: 'sugars',
+									index: 9
+								},
+								{
+									name: 'fat',
+									index: 10
+								},
+								{
+									name: 'water',
+									index: 11
+								},
+								{
+									name: 'calories',
+									index: 12
+								},
+								{
+									name: 'saturated',
+									index: 13
+								},
+								{
+									name: 'monounsat',
+									index: 14
+								},
+								{
+									name: 'polyunsat',
+									index: 15
+								},
+								{
+									name: 'id',
+									index: 16
+								}
+							];
+
+							var groupCategories = [];
+							var groupColors = [];
+
+							$.get('data/nutrients.json', function(data) {
+								normalizeData(data);
+								bitcoinChart.hideLoading();
+								bitcoinChart.setOption(option = getOption(data), true);
+
+							});
+
+							function normalizeData(originData) {
+								var groupMap = {};
+								originData.forEach(function(row) {
+									var groupName = row[indices.group];
+									if(!groupMap.hasOwnProperty(groupName)) {
+										groupMap[groupName] = 1;
+									}
+								});
+
+								originData.forEach(function(row) {
+									row.forEach(function(item, index) {
+										if(index !== indices.name &&
+											index !== indices.group &&
+											index !== indices.id
+										) {
+											// Convert null to zero, as all of them under unit "g".
+											row[index] = parseFloat(item) || 0;
+										}
+									});
+								});
+
+								for(var groupName in groupMap) {
+									if(groupMap.hasOwnProperty(groupName)) {
+										groupCategories.push(groupName);
+									}
+								}
+								var hStep = Math.round(300 / (groupCategories.length - 1));
+								for(var i = 0; i < groupCategories.length; i++) {
+									groupColors.push(echarts.color.modifyHSL('#5A94DF', hStep * i));
+								}
+							}
+
+							function getOption(data) {
+
+								var lineStyle = {
+									normal: {
+										width: 0.5,
+										opacity: 0.05
+									}
+								};
+
+								return {
+									tooltip: {
+										padding: 10,
+
+										borderColor: '#777',
+										borderWidth: 1,
+										formatter: function(obj) {
+											var value = obj[0].value;
+											return '<div style="border-bottom: 1px solid rgba(255,255,255,.3); font-size: 18px;padding-bottom: 7px;margin-bottom: 7px">' +
+												schema[1].name + '：' + value[1] + '<br>' +
+												schema[2].name + '：' + value[2] + '<br>' +
+												schema[3].name + '：' + value[3] + '<br>' +
+												schema[4].name + '：' + value[4] + '<br>' +
+												schema[5].name + '：' + value[5] + '<br>' +
+												schema[6].name + '：' + value[6] + '<br>';
+										}
+									},
+									title: [{
+										text: '对象属性分析',
+										top: 0,
+										left: 0,
+										textStyle: {
+											color: '#333'
+										}
+									}],
+									visualMap: {
+										show: true,
+										type: 'piecewise',
+										categories: groupCategories,
+										dimension: indices.group,
+										inRange: {
+											color: groupColors //['#d94e5d','#eac736','#50a3ba']
+										},
+										outOfRange: {
+											color: ['#ccc'] //['#d94e5d','#eac736','#50a3ba']
+										},
+										top: 20,
+										textStyle: {
+											color: '#333'
+										},
+										realtime: false
+									},
+									parallelAxis: [{
+											dim: 16,
+											name: schema[16].name,
+											scale: true,
+											nameLocation: 'end'
+										},
+										{
+											dim: 2,
+											name: schema[2].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 4,
+											name: schema[4].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 3,
+											name: schema[3].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 5,
+											name: schema[5].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 6,
+											name: schema[6].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 7,
+											name: schema[7].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 8,
+											name: schema[8].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 9,
+											name: schema[9].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 10,
+											name: schema[10].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 11,
+											name: schema[11].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 12,
+											name: schema[12].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 13,
+											name: schema[13].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 14,
+											name: schema[14].name,
+											nameLocation: 'end'
+										},
+										{
+											dim: 15,
+											name: schema[15].name,
+											nameLocation: 'end'
+										}
+									],
+									parallel: {
+										left: 280,
+										top: 20,
+										// top: 150,
+										// height: 300,
+
+										layout: 'vertical',
+										parallelAxisDefault: {
+											type: 'value',
+											name: 'nutrients',
+											nameLocation: 'end',
+											nameGap: 20,
+											nameTextStyle: {
+												color: '#333',
+												fontSize: 14
+											},
+											axisLine: {
+												lineStyle: {
+													color: '#aaa'
+												}
+											},
+											axisTick: {
+												lineStyle: {
+													color: '#777'
+												}
+											},
+											splitLine: {
+												show: false
+											},
+											axisLabel: {
+												textStyle: {
+													color: '#333'
+												}
+											},
+											realtime: false
+										}
+									},
+									animation: false,
+									series: [{
+										name: 'nutrients',
+										type: 'parallel',
+										lineStyle: lineStyle,
+										inactiveOpacity: 0,
+										activeOpacity: 0.01,
+										progressive: 500,
+										smooth: true,
+										data: data
+									}]
+								};
+							}
+						</script>
+					</div>
+				</div>-->
+				<div class="row">
+					<div class="col-md-12">
+						<!--<h6 class="page-header" id='比特币推荐指数'>比特币推荐指数</h6>
+						<div class="row">
+							<div class="col-md-12">
+								<div id="bitcoin" style="height:666px;"></div>
+								<script>
+									// 基于准备好的dom，初始化echarts实例
+									var bitcoin = document.getElementById("bitcoin");
+									var myChart = echarts.init(bitcoin);
+									var option;
+
+									var zhibiao = ['市值', '交易量', '交易量/市值', '上交易所数量', '社区热度', '技术', '投资', '操盘'];
+									var bitcoin = ['btc', 'eth', 'xrp'];
+
+									var data = [
+										[0, 0, 100],
+										[0, 1, 100],
+										[0, 2, 100],
+										[1, 0, 99],
+										[1, 1, 99],
+										[1, 2, 99],
+										[2, 0, 98],
+										[2, 1, 98],
+										[2, 2, 98]
+
+										,
+										[0, 3, 100],
+										[0, 4, 100],
+										[0, 5, 100],
+										[1, 3, 99],
+										[1, 4, 99],
+										[1, 5, 99],
+										[2, 3, 98],
+										[2, 4, 98],
+										[2, 5, 98]
+
+										,
+										[0, 6, 100],
+										[0, 7, 100],
+										[0, 8, 100],
+										[1, 6, 99],
+										[1, 7, 99],
+										[1, 8, 99],
+										[2, 6, 98],
+										[2, 7, 98],
+										[2, 8, 98]
+
+									];
+									option = {
+										title: [],
+										tooltip: {
+											position: 'top'
+										},
+										singleAxis: [],
+										series: []
+									};
+
+									echarts.util.each(bitcoin, function(bitcoin, idx) {
+										option.title.push({
+											top: (idx + 0.5) * 100 / 3 + '%',
+											text: bitcoin
+										});
+										option.singleAxis.push({
+											left: 100,
+											type: 'category',
+											boundaryGap: false,
+											data: zhibiao,
+											top: (idx * 100 / 3 + 5) + '%',
+											height: (100 / 3 - 10) + '%',
+
+										});
+										option.series.push({
+											singleAxisIndex: idx,
+											coordinateSystem: 'singleAxis',
+											type: 'scatter',
+											data: [],
+											symbolSize: function(dataItem) {
+												return dataItem[1] / 1.5;
+											}
+										});
+									});
+
+									echarts.util.each(data, function(dataItem) {
+										option.series[dataItem[0]].data.push([dataItem[1], dataItem[2]]);
+									});
+									// 使用刚指定的配置项和数据显示图表。
+									myChart.setOption(option, true);
+								</script>
+							</div>
+						</div>-->
+						<h3 class="page-header" id='区块链项目推荐'>区块链项目推荐·非投资建议·盈亏自负</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://bitcoin.org"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">btc</span></a>
+									</li>
+									<li>
+										<a href="https://ethereum.org"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">eth</span></a>
+									</li>
+									<li>
+										<a href="https://ripple.com/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">xrp</span></a>
+									</li>
+									<li>
+										<a href="https://tron.network/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">trx</span></a>
+									</li>
+									<li>
+										<a href="https://block.one/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">eos</span></a>
+									</li>
+									<li>
+										<a href="https://storj.io/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">storj</span></a>
+									</li>
+									<li>
+										<a href="https://ipfs.io/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">ipfs</span></a>
+									</li>
+									<li>
+										<a href="https://0x.org/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">zrx</span></a>
+									</li>
+									<li>
+										<a href="https://district0x.io/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">dnt</span></a>
+									</li>
+									<li>
+										<a href="https://www.augur.net/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">augur</span></a>
+									</li>
+									<li>
+										<a href="https://iost.io/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">iost</span></a>
+									</li>
+									<li>
+										<a href="https://basicattentiontoken.org/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">bat</span></a>
+									</li>
+									<li>
+										<a href="https://vechain.org/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">vet</span></a>
+									</li>
+									<li>
+										<a href="https://qtum.org/zh"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">qtum</span></a>
+									</li>
+									<li>
+										<a href="https://omisego.network/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">omg</span></a>
+									</li>
+									<li>
+										<a href="https://chain.link/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">link</span></a>
+									</li>
+									<li>
+										<a href="https://www.bitshares.org/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">bts</span></a>
+									</li>
+									<li>
+										<a href="https://aeternity.com/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">ae</span></a>
+									</li>
+									<li>
+										<a href="https://status.im/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">snt</span></a>
+									</li>
+									<li>
+										<a href="https://status.im/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">snt</span></a>
+									</li>
+									<li>
+										<a href="https://gifto.io/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">gto</span></a>
+									</li>
+									<li>
+										<a href="https://www.redpulse.com/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">rpx</span></a>
+									</li>
+									<li>
+										<a href="https://www.cortexlabs.ai/"><i class="fas fa-star fa-5x"></i>
+											<span class="glyphicon-class">ctxc</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='支付方式'>支付方式</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a target="_blank" href="https://www.advcash.com/en/">
+											<img class="logo" src="img/logo/payment/AdvCash.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.alipay.com/">
+											<img class="logo" src="img/logo/payment/AliPay.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://movo.cash/">
+											<img class="logo" src="img/logo/payment/CashInPerson.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.giftcards.com.au/">
+											<img class="logo" src="img/logo/payment/GiftCard.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.mercadopago.com.co/">
+											<img class="logo" src="img/logo/payment/MercadoPago.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.alipay.com/">
+											<img class="logo" src="img/logo/payment/MoneyGram.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="http://moneygram.cn/">
+											<img class="logo" src="img/logo/payment/M-PESA.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.paypal.com/c2/webapps/mpp/home">
+											<img class="logo" src="img/logo/payment/PayPal.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.alipay.com/"></a>
+										<img class="logo" src="img/logo/payment/QIWI.svg" />
+									</li>
+									<li>
+										<a target="_blank" href="https://qiwi.com/">
+											<img class="logo" src="img/logo/payment/SEPA.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.alipay.com/">
+											<img class="logo" src="img/logo/payment/Skrill.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.skrill.com/en/">
+											<img class="logo" src="img/logo/payment/TransferWise.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://venmo.com/">
+											<img class="logo" src="img/logo/payment/Venmo.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.ka-cn.com/">
+											<img class="logo" src="img/logo/payment/WebMoney.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://pay.weixin.qq.com/index.php/public/wechatpay">
+											<img class="logo" src="img/logo/payment/WeChatPay.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.westernunion.com/ca/en/home.html">
+											<img class="logo" src="img/logo/payment/WesternUnion.svg" /></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://money.yandex.ru/"></a>
+										<img class="logo" src="img/logo/payment/Yandex.Money.svg" />
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='社交平台'>社交平台</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+
+										<a target="_blank" href="https://github.com/TraderAnalysis"><i class="fab fa-github fa-5x"></i>
+											<span class="glyphicon-class">Github</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://twitter.com/mrrobotxin"><i class="fab fa-twitter fa-5x"></i>
+											<span class="glyphicon-class">Twitter</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://medium.com/@mrrobotxin"><i class="fab fa-medium fa-5x"></i>
+											<span class="glyphicon-class">Medium</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://cn.tradingview.com/u/mrrobotxin/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">Tradingview</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.weibo.com"><i class="fab fa-weibo fa-5x"></i>
+											<span class="glyphicon-class">Weibo</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="www.linkedin.com"><i class="fab fa-linkedin-in fa-5x"></i>
+											<span class="glyphicon-class">Linkedin</span>
+										</a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.facebook.com"><i class="fab fa-facebook-f fa-5x"></i>
+											<span class="glyphicon-class">Facebook</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.reddit.com"><i class="fab fa-reddit fa-5x"></i>
+											<span class="glyphicon-class">Reddit</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://steemit.com/">
+											<img class="logo" src="img/logo/steemit.png" />
+											<span class="glyphicon-class">steemit</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.tumblr.com/">
+											<i class="fab fa-tumblr fa-5x"></i>
+											<span class="glyphicon-class">tumblr</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="http://t.me/mrrobotxin"><i class="fab fa-telegram-plane fa-5x"></i>
+											<span class="glyphicon-class">Telegram</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://discord.gg/gpj7bE5"><i class="fab fa-discord fa-5x"></i>
+											<span class="glyphicon-class">Discord</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.whatsapp.com/"><i class="fab fa-whatsapp-square fa-5x"></i>
+											<span class="glyphicon-class">Whatsapp</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.kakaocorp.com/">
+											<img class="logo" src="img/logo/kakaocorp.ico" />
+											<span class="glyphicon-class">kakaocorp</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://vk.com/">
+											<i class="fab fa-vk fa-5x"></i>
+											<span class="glyphicon-class">vk</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://www.pinterest.com">
+											<i class="fab fa-pinterest fa-5x"></i>
+											<span class="glyphicon-class">pinterest</span></a>
+									</li>
+									<li>
+										<a target="_blank" href="https://keybase.io/">
+											<i class="fab fa-keybase fa-5x"></i>
+											<span class="glyphicon-class">keybase</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='比特币交易所'>比特币交易所</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="www.zb.com">
+											<!--<i class="fab fa-bitcoin fa-5x"></i>-->
+											<img class="logo" src="img/logo/dex/zbcom.png" />
+											<span class="glyphicon-class">中币</span></a>
+									</li>
+									<li>
+										<a href="https://www.binance.com/?ref=10011118">
+											<img class="logo" src="img/logo/dex/binanceone.png" />
+											<!--<i class="fab fa-bitcoin fa-5x"></i>-->
+											<span class="glyphicon-class">币安</span></a>
+									</li>
+									<li>
+										<a href="https://www.huobi.co/zh-cn/topic/invited/?invite_code=8ba43">
+											<!--<i class="fab fa-bitcoin fa-5x"></i>-->
+											<img class="logo" src="img/logo/dex/huobi.png" />
+											<span class="glyphicon-class">火币</span></a>
+									</li>
+									<li>
+										<a href="https://www.bitrue.com/activity/task/task-landing?inviteCode=EZQLWZ"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">bitrue</span></a>
+									</li>
+									<li>
+										<a href="https://poloniex.com/">
+											<!--<i class="fab fa-bitcoin fa-5x"></i>-->
+											<img class="logo" src="img/logo/dex/poloniex.png" />
+											<span class="glyphicon-class">poloniex</span></a>
+									</li>
+									<li>
+										<a href="https://hitbtc.com/zh_CN"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">hitbtc</span></a>
+									</li>
+									<li>
+										<a href="https://www.bitfinex.com/">
+											<!--<i class="fab fa-bitcoin fa-5x"></i>-->
+											<img class="logo" src="img/logo/dex/bitfinex.png" />
+											<span class="glyphicon-class">bitfinex</span></a>
+									</li>
+									<li>
+										<a href="https://www.kraken.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">kraken</span></a>
+									</li>
+									<li>
+										<a href="https://international.bittrex.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">bittrex</span></a>
+									</li>
+									<li>
+										<a href="https://www.coinbase.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">coinbase</span></a>
+									</li>
+									<li>
+										<a href="https://www.coinbase.com/join/5cc5ceabb60d8d009f15636a"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">coinbase pro</span></a>
+									</li>
+									<li>
+										<a href="https://www.bithumb.com/">
+											<!--<i class="fab fa-bitcoin fa-5x"></i>-->
+											<img class="logo" src="img/logo/dex/bithumb.png" />
+											<span class="glyphicon-class">bithumb</span></a>
+									</li>
+									<li>
+										<a href="https://big.one/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">big.one</span></a>
+									</li>
+									<li>
+										<a href="https://www.liquid.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">liquid</span></a>
+									</li>
+									<li>
+										<a href="https://www.gate.io/">
+											<!--<i class="fab fa-bitcoin fa-5x"></i>-->
+											<img class="logo" src="img/logo/dex/gate.png" />
+											<span class="glyphicon-class">gate.io</span></a>
+									</li>
+									<li>
+										<a href="https://cobinhood.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">cobinhood</span></a>
+									</li>
+									<li>
+										<a href="https://localethereum.com/cn/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">localethereum</span></a>
+									</li>
+									<li>
+										<a href="http://shapeshift.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">shapeshift</span></a>
+									</li>
+									<li>
+										<a href="https://www.bw.com"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">bw</span></a>
+									</li>
+									<li>
+										<a href="https://www.zbg.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">zbg</span></a>
+									</li>
+									<li>
+										<a href="https://go.dx.exchange/visit/?bta=35429&brand=dxexchange&campaign=411"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">dx.exchange</span></a>
+									</li>
+									<li>
+										<a href="https://www.bitopro.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">bitopro</span></a>
+									</li>
+									<li>
+										<a href="https://simplefx.com/zh"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">simplefx</span></a>
+									</li>
+									<li>
+										<a href="https://www.fmz.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">发明者量化交易平台</span></a>
+									</li>
+									<li>
+										<a href="https://changelly.com/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">changelly</span></a>
+									</li>
+									<li>
+										<a href="http://ritmex.agg.one/"><i class="fab fa-bitcoin fa-5x"></i>
+											<span class="glyphicon-class">ritmex</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='行情可视'>行情可视</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://mifengcha.com/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">蜜蜂查</span></a>
+									</li>
+									<li>
+										<a href="https://www.feixiaohao.com/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">非小号</span></a>
+									</li>
+									<li>
+										<a href="https://bitcoincharts.com"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">bitcoincharts</span></a>
+									</li>
+									<li>
+										<a href="https://cryptowat.ch/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">cryptowat</span></a>
+									</li>
+									<li>
+										<a href="https://coinmarketcap.com/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">coinmarketcap</span></a>
+									</li>
+									<li>
+										<a href="https://tradeblock.com/markets/base/xbt-usd/5m/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">tradeblock</span></a>
+									</li>
+									<li>
+										<a href="https://www.xrp.co/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">xrp.co</span></a>
+									</li>
+									<li>
+										<a href="https://matrixdata.io/home"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">matrixdata</span></a>
+									</li>
+									<li>
+										<a href="https://www.coinhills.com/zh/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">coinhills</span></a>
+									</li>
+									<li>
+										<a href="https://p2sh.info/dashboard/db/home-dashboard?orgId=1"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">p2sh</span></a>
+									</li>
+									<li>
+										<a href="https://gocharting.com/cryptodashboard"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">gocharting</span></a>
+									</li>
+									<li>
+										<a href="http://bitcoinagile.com/default"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">bitcoinagile</span></a>
+									</li>
+									<li>
+										<a href="https://bitinfocharts.com/zh/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">bitinfocharts</span></a>
+									</li>
+									<li>
+										<a href="https://coin.dance/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">比特币分析</span></a>
+									</li>
+									<li>
+										<a href="https://cn.investing.com/crypto/currencies"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">英为财经数字货币行情</span></a>
+									</li>
+									<li>
+										<a href="https://kryptowaluty.org.pl/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">比特币索引</span></a>
+									</li>
+									<li>
+										<a href="https://delta.app/en/crypto"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">delta</span></a>
+									</li>
+									<li>
+										<a href="https://www.coingecko.com/zh"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">币虎</span></a>
+									</li>
+									<li>
+										<a href="https://finance.yahoo.com/cryptocurrencies"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">finance.yahoo.crypto</span></a>
+									</li>
+									<li>
+										<a href="https://bittsanalytics.com/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">bittsanalytics</span></a>
+									</li>
+									<li>
+										<a href="https://www.tokenanalyst.io/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">tokenanalyst</span></a>
+									</li>
+									<li>
+										<a href="https://nomics.com/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">nomics</span></a>
+									</li>
+									<li>
+										<a href="https://thetie.io/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">thetie</span></a>
+									</li>
+									<li>
+										<a href="https://coincap.io/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">coincap</span></a>
+									</li>
+									<li>
+										<a href="https://www.coinlore.com/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">coinlore</span></a>
+									</li>
+									<li>
+										<a href="https://www.cryptocompare.com/"><i class="fas fa-chart-line fa-5x"></i>
+											<span class="glyphicon-class">cryptocompare</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='区块链资讯'>区块链资讯</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://www.jinse.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">金色财经</span></a>
+									</li>
+									<li>
+										<a href="https://www.8btc.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">巴比特</span></a>
+									</li>
+									<li>
+										<a href="https://www.chainfor.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">链向财经</span></a>
+									</li>
+									<li>
+										<a href="https://cryptowat.ch/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">cryptowat</span></a>
+									</li>
+									<li>
+										<a href="https://www.aicoin.net.cn/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">aicoin</span></a>
+									</li>
+									<li>
+										<a href="https://www.aicoin.net.cn/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">aicoin</span></a>
+									</li>
+									<li>
+										<a href="https://www.btc123.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">btc123</span></a>
+									</li>
+									<li>
+										<a href="https://www.chainnode.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">链节点</span></a>
+									</li>
+									<li>
+										<a href="https://www.bishijie.com/kuaixun/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">币世界</span></a>
+									</li>
+									<li>
+										<a href="https://bitcoinist.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">比特币新闻与评论</span></a>
+									</li>
+									<li>
+										<a href="https://www.bloomberg.com/crypto"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">彭博社比特币新闻</span></a>
+									</li>
+									<li>
+										<a href="https://bitcoinmagazine.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">bitcoinmagazine</span></a>
+									</li>
+									<li>
+										<a href="https://www.the-blockchain.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">区块链新闻</span></a>
+									</li>
+									<li>
+										<a href="https://coinrivet.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">coinrivet</span></a>
+									</li>
+									<li>
+										<a href="https://bitcoinist.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">bitcoinist</span></a>
+									</li>
+									<li>
+										<a href="https://ambcrypto.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">ambcrypto</span></a>
+									</li>
+									<li>
+										<a href="https://decryptmedia.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">decryptmedia</span></a>
+									</li>
+									<li>
+										<a href="https://xcong.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">小葱</span></a>
+									</li>
+									<li>
+										<a href="https://bitkan.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">币看</span></a>
+									</li>
+									<li>
+										<a href="https://ethfans.org/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">以太坊爱好者</span></a>
+									</li>
+									<li>
+										<a href="https://www.kg.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">千氪财经</span></a>
+									</li>
+									<li>
+										<a href="https://www.chainhoo.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">链虎财经</span></a>
+									</li>
+									<li>
+										<a href="https://www.CoinDesk.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">CoinDesk</span></a>
+									</li>
+									<li>
+										<a href="https://www.ccn.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">ccn</span></a>
+									</li>
+									<li>
+										<a href="https://zycrypto.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">ccn</span></a>
+									</li>
+									<li>
+										<a href="https://blockonomi.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">blockonomi</span></a>
+									</li>
+									<li>
+										<a href="https://bitcoinerx.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">bitcoinerx</span></a>
+									</li>
+									<li>
+										<a href="https://ethereumworldnews.com"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">以太坊世界</span></a>
+									</li>
+									<li>
+										<a href="https://xrprightnow.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">XRP新闻</span></a>
+									</li>
+									<li>
+										<a href="https://caitlin-long.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">caitlin-long.com</span></a>
+									</li>
+									<li>
+										<a href="https://cryptoslate.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">cryptoslate.com</span></a>
+									</li>
+									<li>
+										<a href="https://coincodex.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">coincodex.com</span></a>
+									</li>
+									<li>
+										<a href="https://cointelegraph.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">cointelegraph.com</span></a>
+									</li>
+									<li>
+										<a href="https://smartereum.com/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">smartereum.com</span></a>
+									</li>
+									<li>
+										<a href="https://bitcoinexchangeguide.com/amp/"><i class="far fa-newspaper fa-5x"></i>
+											<span class="glyphicon-class">bitcoinexchangeguide.com</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='钱包'>钱包</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://token.im/">
+											<!--<i class="fas fa-wallet fa-5x"></i>-->
+											<img class="logo" src="img/logo/dex/imtoken.png" />
+											<span class="glyphicon-class">imtoken</span></a>
+									</li>
+									<li>
+										<a href="https://trustwallet.com/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">trustwallet</span>
+										</a>
+									</li>
+									<li>
+										<a href="https://wallet.coinbase.com/">
+											<!--<i class="fas fa-wallet fa-5x"></i>-->
+											<img class="logo" src="img/logo/wallet.coinbase.png" />
+											<span class="glyphicon-class">wallet.coinbase</span></a>
+									</li>
+									<li>
+										<a href="http://mycrypto.com/">
+											<!--<i class="fas fa-wallet fa-5x"></i>-->
+											<img class="logo" src="img/logo/mycrypto.png" />
+											<span class="glyphicon-class">mycrypto</span></a>
+									</li>
+									<li>
+										<a href="https://www.ledger.com/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">ledger</span></a>
+									</li>
+									<li>
+										<a href="https://tippin.me/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">比特币闪电网络</span></a>
+									</li>
+									<li>
+										<a href="https://wirexapp.com/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">wirexapp</span></a>
+									</li>
+									<li>
+										<a href="https://www.coldlar.com/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">库神钱包</span></a>
+									</li>
+									<li>
+										<a href="https://www.anybit.io/#/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">anybit</span></a>
+									</li>
+									<li>
+										<a href="https://hyperpay.me/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">hyperpay</span></a>
+									</li>
+									<li>
+										<a href="https://app.magnumwallet.co/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">magnumwallet</span></a>
+									</li>
+									<li>
+										<a href="http://mathwallet.org/cn/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">mathwallet</span></a>
+									</li>
+									<li>
+										<a href="https://www.coinomi.com/en/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">coinomi</span></a>
+									</li>
+									<li>
+										<a href="https://gatehub.net/">
+											<i class="fas fa-wallet fa-5x"></i>
+											<span class="glyphicon-class">gatehub</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='区块链浏览器'>区块链浏览器</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://btc.com/"><i class="fas fa-search-plus fa-5x"></i>
+											<span class="glyphicon-class">比特币浏览器</span></a>
+									</li>
+									<li>
+										<a href="https://tokenview.com/"><i class="fas fa-search-plus fa-5x"></i>
+											<span class="glyphicon-class">tokenview</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='区块链实验室'>区块链实验室</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="http://www.blockchainlab.com/"><i class="fas fa-vials fa-5x"></i>
+											<span class="glyphicon-class">blockchainlab</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='投资机构'>投资机构</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://btc12.com/"><i class="fas fa-coins fa-5x"></i>
+											<span class="glyphicon-class">btc12</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='众筹'>众筹</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://topicolist.com/"><i class="fas fa-user-shield fa-5x"></i>
+											<span class="glyphicon-class">topicolist</span></a>
+									</li>
+									<li>
+										<a href="https://icoalert.com/"><i class="fas fa-user-shield fa-5x"></i>
+											<span class="glyphicon-class">icoalert</span></a>
+									</li>
+									<li>
+										<a href="https://www.tokendata.io/"><i class="fas fa-user-shield fa-5x"></i>
+											<span class="glyphicon-class">tokendata</span></a>
+									</li>
+									<li>
+										<a href="http://icoanalytics.org/"><i class="fas fa-user-shield fa-5x"></i>
+											<span class="glyphicon-class">icoanalytics</span></a>
+									</li>
+									<li>
+										<a href="http://www.bifabu.com/"><i class="fas fa-user-shield fa-5x"></i>
+											<span class="glyphicon-class">币发布</span></a>
+									</li>
+									<li>
+										<a href="https://icoguru.io/"><i class="fas fa-user-shield fa-5x"></i>
+											<span class="glyphicon-class">icoguru</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='区块链安全'>区块链安全</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://www.kudelskisecurity.com/"><i class="fas fa-shield-alt fa-5x"></i>
+											<span class="glyphicon-class">kudelskisecurity</span></a>
+									</li>
+									<li>
+										<a href="https://hacken.io/"><i class="fas fa-shield-alt fa-5x"></i>
+											<span class="glyphicon-class">hacken.io</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='区块链安全'>区块链学习</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://blockbyblock.io/resources"><i class="fas fa-shield-alt fa-5x"></i>
+											<span class="glyphicon-class">blockbyblock</span></a>
+									</li>
+									<li>
+										<a href="https://blockstack.org/"><i class="fas fa-shield-alt fa-5x"></i>
+											<span class="glyphicon-class">blockstack</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='Dapp'>Dapp</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://www.dapp.com/zh/"><i class="fas fa-shield-alt fa-5x"></i>
+											<span class="glyphicon-class">dapp.com</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<h3 class="page-header" id='区块链搜索引擎'>区块链搜索引擎</h3>
+						<div class="row">
+							<div class="bs-glyphicons">
+								<ul class="bs-glyphicons-list">
+									<li>
+										<a href="https://nebulas.io/"><i class="fas fa-shield-alt fa-5x"></i>
+											<span class="glyphicon-class">星云链</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<script type="text/javascript" src="https://widget.coinlore.com/widgets/coinlore-list-widget.js"></script>
+						<div class="coinlore-list-widget" data-mcap="1" data-mcurrency="usd" data-top="100" data-cwidth="" data-bcolor="#fff" data-coincolor="#428bca" data-pricecolor="#4c4c4c" style="width: 100%;"></div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+	</body>
+
+</html>
+
+<!--
+		作者：mrrobotxin@dingtalk.com
+		时间：2019-04-27
+		描述：
+		http://www.alpha-quantum.com/
+		https://www.realitysharesadvisors.com/
+		http://bitcoin.sipa.be/versions.html
+	-->

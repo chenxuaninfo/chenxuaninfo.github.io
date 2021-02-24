@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+
+	<head>
+		<link href="http://gmpg.org/xfn/11" rel="profile">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<!-- Enable responsiveness on mobile devices-->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>数据库</title>
+		<!-- CSS -->
+		<link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link rel="stylesheet" href="../css/docs.min.css">
+		<link rel="stylesheet" href="../css/poole.css">
+		<link rel="stylesheet" href="../css/lanyon.css">
+		<link rel="stylesheet" href="../css/main.css">
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+		<!-- Icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/red.png">
+		<link rel="shortcut icon" href="../img/red.png">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+		<script type="text/javascript" src="../js/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+
+		<link href="../css/xt256.css" rel="stylesheet">
+		<script src="../js/highlight.min.js"></script>
+		<script>
+			hljs.initHighlightingOnLoad();
+		</script>
+	</head>
+
+	<body class="theme-base-08">
+
+		<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+		<!-- Toggleable sidebar -->
+		<div class="sidebar" id="sidebar">
+			<div class="sidebar-item">
+				<a href="#" target="_blank">数据库</p>
+			</div>
+
+			<nav class="sidebar-nav">
+				<a class="sidebar-nav-item active" target="_blank" href="/"><i class="fab fa-accessible-icon"></i>i-a.vip</a>
+			</nav>
+
+			<div class="sidebar-item">
+				<p>
+					&copy;2019.
+					<a href="about.html">About.me</a> All rights reserved. Currently v8.8.8
+				</p>
+			</div>
+		</div>
+		<div class="wrap">
+			<div class="masthead">
+				<div class="container">
+					<h3 class="masthead-title">
+            <a href="/" title="Home">数据库</a>
+            <small>notes</small>
+          </h3>
+				</div>
+			</div>
+
+			<div class="container content">
+				<h3 id="" class="page-header">在线SQL工具</h3>
+				<div class="row">
+					<ul>
+						<li>
+							<a target="_blank" href="http://sqlfiddle.com/">sqlfiddle</a>
+						</li>
+						<li>
+							<a target="_blank" href="https://rextester.com/l/sql_server_online_compiler">rextester</a>
+						</li>
+					</ul>
+				</div>
+				<h3 class="header">初始准备</h3>
+				<div class="row">
+					<pre><code class="sql">
+a.下载数据库管理工具与数据库服务器并安装
+1.win+R
+2.cmd
+3.services.msc
+4.open service(名称)
+5.连接数据库（服务器ip，账号，密码）
+</code></pre>
+				</div>
+				<h3 class="header">创建数据库</h3>
+				<div class="row">
+					<pre><code class="sql">
+--创建数据库
+create database school;
+--切换数据库
+use school;
+--1.学生表  Student(S#,Sname,Sage,Ssex)
+--S# 学生编号 Sname 学生姓名 Sage 出生年月  Ssex 学生性别
+create table Student(S# varchar(10),Sname nvarchar(10),Sage datetime,Ssex nvarchar(10))
+insert into Student values('01' , '赵雷' , '1990-01-01' , '男')
+insert into Student values('02' , '钱电' , '1990-12-21' , '男')
+insert into Student values('03' , '孙风' , '1990-05-20' , '男')
+insert into Student values('04' , '李云' , '1990-08-06' , '男')
+insert into Student values('05' , '周梅' , '1991-12-01' , '女')
+insert into Student values('06' , '吴兰' , '1992-03-01' , '女')
+insert into Student values('07' , '郑竹' , '1989-07-01' , '女')
+insert into Student values('08' , '王菊' , '1990-01-20' , '女')
+--2.课程表  Course(C#,Cname,T#)
+--C# 课程编号  Cname 课程名称  T# 教师编号
+create table Course(C# varchar(10),Cname nvarchar(10),T# varchar(10))
+insert into Course values('01' , '语文' , '02')
+insert into Course values('02' , '数学' , '01')
+insert into Course values('03' , '英语' , '03')
+--3.教师表  Teacher(T#,Tname)
+--T# 教师编号 Tname 教师姓名
+create table Teacher(T# varchar(10),Tname nvarchar(10))
+insert into Teacher values('01' , '张三')
+insert into Teacher values('02' , '李四')
+insert into Teacher values('03' , '王五')
+--4.成绩表  SC(S#,C#,score)
+--S# 学生编号  C# 课程编号  SScore 分数
+create table SC(S# varchar(10),C# varchar(10),SScore decimal(18,1))
+insert into SC values('01' , '01' , 80)
+insert into SC values('01' , '02' , 90)
+insert into SC values('01' , '03' , 99)
+insert into SC values('02' , '01' , 70)
+insert into SC values('02' , '02' , 60)
+insert into SC values('02' , '03' , 80)
+insert into SC values('03' , '01' , 80)
+insert into SC values('03' , '02' , 80)
+insert into SC values('03' , '03' , 80)
+insert into SC values('04' , '01' , 50)
+insert into SC values('04' , '02' , 30)
+insert into SC values('04' , '03' , 20)
+insert into SC values('05' , '01' , 76)
+insert into SC values('05' , '02' , 87)
+insert into SC values('06' , '01' , 31)
+insert into SC values('06' , '03' , 34)
+insert into SC values('07' , '02' , 89)
+insert into SC values('07' , '03' , 98)
+
+</code></pre>
+				</div>
+				<h3 class="header">功能代码</h3>
+				<div class="row">
+					<pre><code class="sql">
+--查询数据库信息
+select * from master.dbo.sysdatabases where name='jxyhis' and status<>512
+--获取所有数据库名
+select * from master.dbo.sysdatabases
+--获取所有的表名
+--XTYPE='U':表示所有用户表;
+--XTYPE='S':表示所有系统表;
+select * from sysobjects where xtype='u'
+--读取库中的所有表名 （当前数据库）
+select name from sysobjects where xtype='u' 
+--读取指定表的所有列名 
+select name from syscolumns where id=(select max(id) from sysobjects where xtype='u' and name='表名') 
+</code></pre>
+				</div>
+			</div>
+		</div>
+
+		<label for="sidebar-checkbox" class="sidebar-toggle"></label>
+
+	</body>
+
+</html>
