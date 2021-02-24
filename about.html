@@ -8,7 +8,7 @@
 	<meta name="keywords" content="chenxuan.info" />
 	<meta name="description" content="chenxuan.info" />
 	<title>ChenXuan.Info</title>
-	<!-- <bgsound src="./01/cm - 孤芳自赏 （原唱：杨小壮）.mp3" loop="-1"></bgsound> -->
+	<bgsound src="./01/cm - 孤芳自赏 （原唱：杨小壮）.mp3" loop="-1"></bgsound>
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="01/img/RGBW_L.png">
 	<link rel="shortcut icon" href="01/img/RGBW_L.png">
 	<link href="01/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet" />
@@ -47,21 +47,12 @@
 	<script>
 		var infoChart = echarts.init(document.getElementById("info"));
 		var infodata = {
-			"name": "ChenXuan.Info",
-			// "link": "http://chenxuan.info/index.html",
-			"children": [{
-				"name": "SiteMap",
-				"link": "./sitemap/index.html"
-			}, {
+			"name": "SiteMap",
+			"link": "./sitemap/index.html",
+			"children": [ {
 				"name": "Data Analysis",
-				"link": "https://www.yuque.com/chenxuaninfo/analyst"
-
-			}, {
-				"name": "Data Analysis",
-				"children": [{
-					"name": "Execl",
-					"link": "https://www.yuque.com/chenxuaninfo/execl"
-				}, {
+				"link": "https://www.yuque.com/chenxuaninfo/analyst",
+				"children": [ {
 					"name": "PowerBI",
 					"link": "https://www.yuque.com/chenxuaninfo/powerbi"
 				}, {
@@ -121,12 +112,6 @@
 					"name": "Edrawsoft",
 					"link": "https://www.edrawsoft.cn/"
 				}]
-			}, {
-				"name": "Business Analytics",
-				"link": "https://www.yuque.com/chenxuaninfo/zrrzgy"
-			}, {
-				"name": "Data Visualization",
-				"link": "https://www.yuque.com/chenxuaninfo/oo1mnh"
 			}]
 		};
 		infoChart.setOption(option = {
